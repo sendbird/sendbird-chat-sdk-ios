@@ -1,5 +1,10 @@
 # Change Log
 
+### v4.0.0-beta.2 (Apr 29, 2022)
+- Added new feature, Scheduled Messages
+- Added new parameter, channel_type, to Polls interfaces
+- Fixed 401 error when handling image File URL
+
 ### v4.0.0-beta (Apr 12, 2022)
 - Codebase has been re-written from Objective-C to Swift.
 - Naming of the Product has been changed from `SendBirdSDK` to `SendbirdChatSDK`.

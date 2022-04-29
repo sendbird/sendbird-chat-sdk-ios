@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.summary      = 'Sendbird Chat iOS Framework'
   s.description  = 'Messaging and Chat API for Mobile Apps and Websites'
   s.homepage     = 'https://sendbird.com'
-  s.license      = { :type => 'Commercial', :file => 'LICENSE.md' }
+  s.license      = { :type => 'Commercial', :file => 'SendbirdChatSDK/LICENSE.md' }
   s.authors      = {
     'Minhyuk Kim' => 'minhyuk.kim@sendbird.com',
     'Sendbird' => 'sha.sdk_deployment@sendbird.com',
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform = :ios, '9.0'
   s.documentation_url = 'https://docs.sendbird.com/'
-  s.ios.vendored_frameworks = 'SendbirdChatSDK.xcframework'
+  s.ios.vendored_frameworks = 'SendbirdChatSDK/SendbirdChatSDK.xcframework'
   s.ios.frameworks = ['UIKit', 'CFNetwork', 'Security', 'Foundation', 'Network', 'MobileCoreServices', 'SystemConfiguration', 'CoreFoundation']
   s.ios.library   = 'icucore'
 end

@@ -1,5 +1,8 @@
 # Change Log
 
+### v4.0.0-beta.3 (May 3, 2022)
+- Updated all naming to match the capitalization convention.
+
 ### v4.0.0-beta.2 (Apr 29, 2022)
 - Added new feature, Scheduled Messages
 - Added new parameter, channel_type, to Polls interfaces

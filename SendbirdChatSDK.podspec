@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     'Celine Moon' => 'celine.moon@sendbird.com',
     'Ernest Hong' => 'ernest.hong@sendbird.com'
   }
-  s.source       = { :http => 'https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.0.0-beta.4/SendbirdChatSDK.zip', :sha1 => '79d1314b267a560de33ed0b452ff8f8320f64174d8f2dc04d1eadf6a01836bb3' }
+  s.source       = { :http => 'https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.0.0-beta.4/SendbirdChatSDK.zip', :sha1 => '76e80a62ca4f0cbbb7b44dbf9c8e1a9be2d6db3f' }
   s.requires_arc = true
   s.platform = :ios, '9.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'

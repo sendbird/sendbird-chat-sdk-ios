@@ -31,14 +31,14 @@ Pod::Spec.new do |s|
     'Sendbird' => 'sha.sdk_deployment@sendbird.com',
     'Jed Gyeong' => 'jed.gyeong@sendbird.com',
     'Celine Moon' => 'celine.moon@sendbird.com',
-    'Erenst Hong' => 'ernest.hong@sendbird.com'
+    'Ernest Hong' => 'ernest.hong@sendbird.com'
   }
   s.source       = { :http => \"https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v#{s.version}/SendbirdChatSDK.zip\", :sha1 => \"$SHA1\" }
   s.requires_arc = true
   s.platform = :ios, '9.0'
-  s.documentation_url = 'https://docs.sendbird.com/'
+  s.documentation_url = 'https://sendbird.com/docs/chat'
   s.ios.vendored_frameworks = 'SendbirdChatSDK/SendbirdChatSDK.xcframework'
-  s.ios.frameworks = ['UIKit', 'CFNetwork', 'Security', 'Foundation', 'Network', 'MobileCoreServices', 'SystemConfiguration', 'CoreFoundation']
+  s.ios.frameworks = ['UIKit', 'CFNetwork', 'Security', 'Foundation', 'MobileCoreServices', 'SystemConfiguration', 'CoreFoundation']
   s.ios.library   = 'icucore'
 end
 "

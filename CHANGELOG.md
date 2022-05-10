@@ -1,5 +1,7 @@
 # Change Log
 
+<!--PLACEHOLDER-->
+
 ### v4.0.0-beta.3 (May 3, 2022)
 - Updated all naming to match the capitalization convention.
 

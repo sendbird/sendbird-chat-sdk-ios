@@ -30,7 +30,7 @@ Once this is in place, take a look at [all the other features](https://sendbird.
 
 ### Documentation
 
-Find out more about Sendbird Chat for iOS in [the documentation](https://sendbird.com/docs/chat/v4/ios/getting-started/send-first-message). If you have any comments, questions or feature requests, let us know in the [Sendbird community](https://community.sendbird.com).
+Find out more about Sendbird Chat for iOS in [the documentation](https://sendbird.com/docs/chat/v4/ios/quickstart/send-first-message). If you have any comments, questions or feature requests, let us know in the [Sendbird community](https://community.sendbird.com).
 <br />
 
 ## Requirements

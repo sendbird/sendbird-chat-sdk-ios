@@ -1,5 +1,9 @@
 # Change Log
 
+### v4.0.0-beta.6 (May 24, 2022)
+- Check & solve internal interface being exposed to Objective-C headers
+- When parsing metaData from json, its key whose value is null is ignored.
+
 ### v4.0.0-beta.5 (May 17, 2022)
 - Added mentioned message template.
 - Fixed wrong ACK timeout error for markAsRead.

@@ -1,5 +1,12 @@
 # Change Log
 
+### v4.0.0-beta.7 (May 24, 2022)
+- Added mentioned users to pending, failed, and scheduled messages.
+- When operatorUserIDs = nil, exclude operator_ids field from json request.
+- Fixed a bug that the sendingStatus in the scheduled message while decoding.
+- Fixed the error that requestID of scheduled message is empty.
+- Added thumbnails to a copied fileMessage.
+
 ### v4.0.0-beta.6 (May 24, 2022)
 - Check & solve internal interface being exposed to Objective-C headers
 - When parsing metaData from json, its key whose value is null is ignored.

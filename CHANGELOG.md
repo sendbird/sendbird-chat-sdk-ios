@@ -1,6 +1,6 @@
 # Change Log
 
-### v4.0.0-beta.7 (May 24, 2022)
+### v4.0.0-beta.7 (May 31, 2022)
 - Added mentioned users to pending, failed, and scheduled messages.
 - When operatorUserIDs = nil, exclude operator_ids field from json request.
 - Fixed a bug that the sendingStatus in the scheduled message while decoding.

@@ -1,6 +1,6 @@
 # Change Log
 
-## v4.0.0-beta.8 (June 8, 2022)
+## v4.0.0-beta.9 (Jun 10, 2022)
 
 *Contains all changes since v4.0.0-beta*
 
@@ -24,6 +24,7 @@
 * When operatorUserIDs = nil, exclude operator_ids field from json request
 * Added mentioned message template
 * Added id to User, BaseChannel and BaseMessage to conform to Identifiable
+* Add MyMemberStateFilter for group channel count and channel query
 * Fixed SBDPushTemplate.default and SBDPushTemplate.alternative as public
 * Changed User's userID type from optional String to non-optional String
 * Added a function to send scheduled messages immediately

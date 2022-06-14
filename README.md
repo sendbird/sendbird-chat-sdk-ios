@@ -78,7 +78,7 @@ You can use an Xcode native package manager **Swift Packages** for installation.
 
 <!-- ![Image|Adding a package to your project using Swift Packages](https://static.sendbird.com/docs/chat-ios-getting-started-swift-packages.png) -->
 
-3. When a pop-up shows, enter our github repository address in the search bar. The address is `TODO ADD URL`.
+3. When a pop-up shows, enter our github repository address in the search bar. The address is `https://github.com/sendbird/sendbird-chat-sdk-ios`.
 
 <!-- ![Image|Typing in the repository address of the Chat SDK package](https://static.sendbird.com/docs/chat-ios-getting-started-repository-adress.png) -->
 

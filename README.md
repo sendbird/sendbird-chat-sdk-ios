@@ -37,10 +37,10 @@ Find out more about Sendbird Chat for iOS in [the documentation](https://sendbir
 
 The minimum requirements for Chat SDK for iOS are:
 
-- `Mac OS with developer mode enabled`
+- `macOS`
 - `Xcode`
 - `At least one device running iOS 9.0 and later`
-- `Swift 5.0 and later` or `Objective-C`
+- `Swift 5.0 or later` or `Objective-C`
 
 > **Note**: Sendbird server supports Transport Layer Security (TLS) from version 1.0 up to 1.3. For example, in the server regions where TLS 1.3 isn’t available, lower versions, sequentially from 1.2 to 1.0, will be supported for secure data transmission.
 

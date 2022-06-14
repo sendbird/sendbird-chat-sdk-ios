@@ -1,22 +1,37 @@
 # Change Log
 
-## v4.0.0 (Jun 14, 2022)
+## v4.0.0-beta.9 (Jun 10, 2022)
+*Contains all changes since v4.0.0-beta*
 
-> To see detailed changes for below items, please refer to the [migration guide](https://sendbird.com/docs/chat/v4/ios/getting-started/migration-guide)
+### Bugs
+* Fixed a bug that `useMemberInfoInMessage` didn't work
+* Fixed a bug that the channel collection can't load channels
+* Fixed a bug that the sendingStatus in the scheduled message while decoding
+* Fixed the error that requestID of scheduled message is empty
+* Added thumbnails to a copied fileMessage
+* Public interfaces are exposed to Objective-C headers
+* When parsing metaData from json, its key whose value is null is ignored
+* Fixed wrong ACK timeout error for markAsRead
+* Fixed to guarantee BaseMessage serialize compatibility when updating from v3 to v4
+* Added missing objcMembers attribute for PushTemplate
+* Fixed 401 error when handling image File URL
 
 ### Improvement
-* Added mentioned users to pending, and failed messages
-* When operatorUserIds = nil, exclude operator_ids field from json request
+* Added `ScheduledBaseMessageCreateParams` and `ScheduledBaseMessageUpdateParams`
+* Changed `channelURL` of `SendbirdChat.createScheduledMessageListQuery` to optional
+* Added mentioned users to pending, failed, and scheduled messages
+* When operatorUserIDs = nil, exclude operator_ids field from json request
 * Added mentioned message template
 * Added id to User, BaseChannel and BaseMessage to conform to Identifiable
 * Add MyMemberStateFilter for group channel count and channel query
 * Fixed SBDPushTemplate.default and SBDPushTemplate.alternative as public
-* Changed User's userId type from optional String to non-optional String
+* Changed User's userID type from optional String to non-optional String
+* Added a function to send scheduled messages immediately
 * Changed internal logic of log levels. Now, only logs with equal or higher log level than the specified LogLevel are printed
+* Added new feature, Scheduled Messages
+* Added new parameter, channel_type, to Polls interfaces
 * Codebase has been re-written from Objective-C to Swift
-* Added annotations for renamed methods and 
-* Changed the type of the value that the `loadNextPage()` of the `MutedUserListQuery` and the `BannedUserListQuery` return through the callbacks to the array of the `RestrictedUser`
-* Changed the parameter's type of the `channel(_:userWasMuted:)` and `channel(_:userWasBanned:)` of `BaseChannelDelegate` to the `RestrictedUser`
+* Added annotations for renamed methods and properties
 
 ### Breaking changes
 
@@ -50,7 +65,7 @@
 * `clearCachedData(completionHandler:)` completion type `Void` to `SBErrorHandler`
 * `initWithApplicationId` to `initialize(params:)`
 * `getChannelCount` to `getGroupChannelCount` 
-* `getChannelCountWithMemberStateFilter:` to `getGroupChannelCountWithMemberStateFilter:`.
+* `getChannelCountWithMemberStateFilter:` to `getGroupChannelCountWithMemberStateFilter:`
 
 ##### Removed 
 * `createAllUserListQuery`; Use `createApplicationUserListQuery`
@@ -121,6 +136,8 @@
 * `channel(_:updatedReactions:)` is moved to `BaseChannelDelegate`
 * `channelDidUpdateOperators(_:)` is moved to `BaseChannelDelegate`
 * `channel(_:didUpdateThreadInfo:)` is moved to `BaseChannelDelegate`
+* `didUpdatePoll(_:)` is moved to `BaseChannelDelegate`
+* `didVotePoll(_:)` is moved to `BaseChannelDelegate`
 * `channelDidUpdateReadStatus(_:)` is moved to `GroupChannelDelegate`
 * `channelDidUpdateDeliveryStatus(_:)` is moved to `GroupChannelDelegate`
 * `channelDidUpdateTypingStatus(_:)` is moved to `GroupChannelDelegate`
@@ -133,6 +150,27 @@
 * `channelDidChangeParticipantCount(_:)` is moved to `OpenChannelDelegate`
 * `channel(_:userDidEnter:)` is moved to `OpenChannelDelegate`
 * `channel(_:userDidExit:)` is moved to `OpenChannelDelegate`
+
+#### BaseMessage
+##### Changed
+* `parent` to `parentMessage`
+* `String` to `ChannelType` for `channelType` property
+
+##### Removed 
+* `parentMessageText`; Use `parentMessage`
+* `metaArray`; Use `metaArrays`
+
+#### FileMessage
+##### Removed
+* `requestState`; Use `sendingStatus`
+
+#### UserMessage
+##### Removed 
+* `requestState`; Use `sendingStatus`
+
+#### PreviousMessageListQuery
+##### Changed
+* `loadWithCompletionHandler:` to `loadNext(completionHandler:)`
 
 #### Params
 ##### Added
@@ -147,8 +185,50 @@
     * `discoverable` to `isDiscoverable`
 * `OpenChannelParams` to `OpenChannelCreateParams` and `OpenChannelUpdateParams`
 
-## v4 Beta Changelog
-* Please refer to the [Changelog for v4 beta](https://github.com/sendbird/sendbird-chat-sdk-ios/blob/master/CHANGELOG_V4_BETA.md)
+## v4.0.0-beta.8 (Jun 8, 2022)
+* `useMemberAsMessageSender` to `useMemberInfoInMessage`
+* Fixed a bug that `useMemberInfoInMessage` didn't work
+* Added `ScheduledBaseMessageCreateParams` and `ScheduledBaseMessageUpdateParams`
+* Fixed a bug that the channel collection can't load channels
 
-## v3 Changelog
-* Please refer to the [Changelog for v3](https://github.com/sendbird/sendbird-ios-framework/blob/master/CHANGELOG.md)
+## v4.0.0-beta.7 (May 24, 2022)
+* Added mentioned users to pending, failed, and scheduled messages
+* When operatorUserIDs = nil, exclude operator_ids field from json request
+* Fixed a bug that the sendingStatus in the scheduled message while decoding
+* Fixed the error that requestID of scheduled message is empty
+* Added thumbnails to a copied fileMessage
+
+## v4.0.0-beta.6 (May 24, 2022)
+* Check & solve internal interface being exposed to Objective-C headers
+* When parsing metaData from json, its key whose value is null is ignored
+
+## v4.0.0-beta.5 (May 17, 2022)
+* Added mentioned message template
+* Fixed wrong ACK timeout error for markAsRead.
+* Added annotations for renamed methods and properties
+* Added id to User, BaseChannel and BaseMessage to conform to Identifiable
+* Fixed SBDPushTemplate.default and SBDPushTemplate.alternative as public
+* Changed User's userID type from optional String to non-optional String
+* Fixed to guarantee BaseMessage serialize compatibility when updating from v3 to v4
+* Added a function to send scheduled messages immediately
+
+## v4.0.0-beta.4 (May 10, 2022)
+* Make SBDPushTemplate.default and SBDPushTemplate.alternative public
+* Added missing objcMembers attribute for PushTemplate
+* Changed internal logic of log levels. Now, only logs with equal or higher log level than the specified LogLevel are printed
+
+## v4.0.0-beta.3 (May 3, 2022)
+* Updated all naming to match the capitalization convention
+
+## v4.0.0-beta.2 (Apr 29, 2022)
+* Added new feature, Scheduled Messages
+* Added new parameter, channel_type, to Polls interfaces
+* Fixed 401 error when handling image File URL
+
+## v4.0.0-beta (Apr 12, 2022)
+* Codebase has been re-written from Objective-C to Swift
+* Naming of the Product has been changed from `SendBirdSDK` to `SendbirdChatSDK`
+* Naming of the main class has been changed from `SBDMain` to `SendbirdChat`
+* Naming of public interfaces has been renamed to better match Swift's language style guide
+* Deprecated interfaces from v3 has been removed
+* Support for SyncManager has been removed

@@ -1,5 +1,10 @@
 # Change Log
 
+## v4.0.1 (Jun 23, 2022)
+* Fixed a bug that the failed message isn’t removed from the memory cache of the message collection
+* Fixed `createBannedUserListQuery` to use the params builder
+* Fixed unstable reconnection on the simulator
+
 ## v4.0.0 (Jun 14, 2022)
 
 > To see detailed changes for below items, please refer to the [migration guide](https://sendbird.com/docs/chat/v4/ios/getting-started/migration-guide)

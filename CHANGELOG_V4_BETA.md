@@ -1,4 +1,4 @@
-# Change Log
+# Changelog
 
 ## v4.0.0-beta.9 (Jun 10, 2022)
 *Contains all changes since v4.0.0-beta*

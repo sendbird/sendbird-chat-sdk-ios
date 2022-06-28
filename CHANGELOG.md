@@ -1,4 +1,10 @@
-# Change Log
+# Changelog
+
+## v4.0.2 (Jun 28, 2022)
+* Fixed a bug that the message collection returned failed messages across all channels
+* Changed the default value of `memberInfoInMessage` to `true`
+* Fixed a message search bug
+* Improved stability
 
 ## v4.0.1 (Jun 23, 2022)
 * Fixed a bug that the failed message isn’t removed from the memory cache of the message collection

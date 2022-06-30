@@ -40,7 +40,7 @@ TEMPLATE="
 import PackageDescription
 let package = Package(
     name: \"$PRODUCT\",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v9)],
     products: [
         .library(
             name: \"$PRODUCT\",

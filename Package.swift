@@ -4,7 +4,7 @@
 import PackageDescription
 let package = Package(
     name: "SendbirdChatSDK",
-    platforms: [.iOS(.v9)],
+    platforms: [.iOS(.v10)],
     products: [
         .library(
             name: "SendbirdChatSDK",
@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SendbirdChatSDK",
-            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.0.2/SendbirdChatSDK.xcframework.zip",
-            checksum: "f69344dfb13ff53e274fb9255953084c7a3137bd87ebc03f0b9c3ebb423684d8"
+            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.0.3/SendbirdChatSDK.xcframework.zip",
+            checksum: "d1c2911b40098938b3d5283bdc88dd69c5c50fc1133a31ca2bbfc3aa850378e5"
         ),
     ]
 )

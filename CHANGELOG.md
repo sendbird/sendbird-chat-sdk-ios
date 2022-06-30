@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.0.3 (Jun 30, 2022)
+* Improved stability
+
 ## v4.0.2 (Jun 28, 2022)
 * Fixed a bug that the message collection returned failed messages across all channels
 * Changed the default value of `memberInfoInMessage` to `true`

@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.0.4 (Jul 6, 2022)
+* Fixed a bug that the message collection can't call the message update event when the reconnection is completed
+* Improved stability
+
 ## v4.0.3 (Jun 30, 2022)
 * Improved stability
 

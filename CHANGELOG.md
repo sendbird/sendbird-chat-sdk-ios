@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.0.5 (Jul 11, 2022)
+* Fixed a bug that sending a file message doesn’t work on the app extension
+* Fixed a bug that the file URL of the file message is not accessible
+* Fixed a bug that the message collection can’t load the previous messages when the network is not connected
+* Fixed a bug that the reaction event is not applied to the cached messages
+* Fixed a bug in the message search query
+
 ## v4.0.4 (Jul 6, 2022)
 * Fixed a bug that the message collection can't call the message update event when the reconnection is completed
 * Improved stability

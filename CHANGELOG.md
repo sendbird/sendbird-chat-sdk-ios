@@ -1,4 +1,7 @@
 # Changelog
+## 4.0.6 (Jul 13, 2022)
+* Fixed a bug that sending a file message doesn’t work on the app extension
+
 
 ## v4.0.5 (Jul 11, 2022)
 * Fixed a bug that sending a file message doesn’t work on the app extension

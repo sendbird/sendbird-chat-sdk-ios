@@ -1,7 +1,9 @@
 # Changelog
+## 4.0.7 (Jul 14, 2022)
+* Fixed a bug that serializing pending messages causes a crash on iOS 12 or lower
+
 ## 4.0.6 (Jul 13, 2022)
 * Fixed a bug that sending a file message doesn’t work on the app extension
-
 
 ## v4.0.5 (Jul 11, 2022)
 * Fixed a bug that sending a file message doesn’t work on the app extension

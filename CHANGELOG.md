@@ -1,4 +1,7 @@
 # Changelog
+## 4.0.8 (Jul 19, 2022)
+* Fixed auto-resend issue in offline write
+
 ## 4.0.7 (Jul 14, 2022)
 * Fixed a bug that serializing pending messages causes a crash on iOS 12 or lower
 

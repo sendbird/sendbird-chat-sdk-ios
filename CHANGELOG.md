@@ -1,4 +1,13 @@
 # Changelog
+
+## 4.0.9 (Aug 17, 2022)
+* Added shouldRemoveOperatorStatus function
+* Updated copyMessage function to only duplicate successfully sent message. Copying any non-successful message will now return an invalidParameter error
+* Fixed concurrency issues
+* Fixed WS connection being lost after switching from wifi to LTE
+* Fixed OpenChannel not updating channel’s changed information
+* Fixed a copied fileMessage’s image not being shown
+
 ## 4.0.8 (Jul 19, 2022)
 * Fixed auto-resend issue in offline write
 

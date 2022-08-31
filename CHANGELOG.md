@@ -1,5 +1,14 @@
 # Changelog
 
+## 4.0.10 (Aug 31, 2022)
+* Added MessageSearchQuery's totalCount and made it public
+* Fixed memory problem when continuously sending large files
+* Changed the keywords of the classes and functions below from public to open (subclassing)
+
+User, BaseChannel, GroupChannel, OpenChannel, BaseCollection, GroupChannelCollection, BaseMessage, UserMessage, FileMessage, AdminMessage
+
+Note: However, subclassing is not recommended, and please be aware that any issue that arises from subclassing will take substantially longer time to react
+
 ## 4.0.9 (Aug 17, 2022)
 * Added shouldRemoveOperatorStatus function
 * Updated copyMessage function to only duplicate successfully sent message. Copying any non-successful message will now return an invalidParameter error

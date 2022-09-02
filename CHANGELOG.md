@@ -1,5 +1,8 @@
 # Changelog
 
+## 4.0.11 (Sep 2, 2022)
+* Fixed a bug where a dirty flag of a group channel is handled improperly
+
 ## 4.0.10 (Aug 31, 2022)
 * Added MessageSearchQuery's totalCount and made it public
 * Fixed memory problem when continuously sending large files

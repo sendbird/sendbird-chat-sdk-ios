@@ -1,4 +1,10 @@
 # Changelog
+## 4.0.12 (Sep 14, 2022)
+* Added metaData related logic for filtering in GroupChannelListQuery.belongsTo
+* Renamed methods in `SendbirdChat`
+    * `add(_ delegate: ConnectionDelegate, identifier: String)` -> `addConnectionDelegate(_ delegate: ConnectionDelegate, identifier: String)`
+    * `add(_ delegate: BaseChannelDelegate, identifier: String)` -> `addChannelDelegate(_ delegate: BaseChannelDelegate, identifier: String)`
+    * `add(_ delegate: UserEventDelegate, identifier: String)` -> `addUserEventDelegate(_ delegate: UserEventDelegate, identifier: String)`
 
 ## 4.0.11 (Sep 2, 2022)
 * Fixed a bug where a dirty flag of a group channel is handled improperly

@@ -1,4 +1,8 @@
 # Changelog
+
+## 4.0.13 (Sep 16, 2022)
+* Fixed crash issue when using `SendbirdChat.add(_:identifier)`
+
 ## 4.0.12 (Sep 14, 2022)
 * Added metaData related logic for filtering in GroupChannelListQuery.belongsTo
 * Renamed methods in `SendbirdChat`

@@ -137,7 +137,7 @@ github "sendbird/sendbird-chat-sdk-ios"
 3. Run the carthage update command to download Sendbird Chat SDK for iOS.
 
 ```bash
-$ carthage update
+$ carthage update --use-xcframeworks
 ```
 
 4. Once the update is complete, go to your Xcode project's **General** settings tab. Then, open the **<YOUR_XCODE_PROJECT_DIRECTORY>/Carthage/Build/iOS** in the **Finder** window and drag and drop the **SendbirdChatSDK.xcframework** folder to the **Frameworks, Libraries, and Embedded** section in Xcode.
@@ -248,8 +248,8 @@ Create an open channel using the following codes. [Open channels](https://sendbi
 let params = OpenChannelCreateParams()
 params.name = CHANNEL_NAME
 
-OpenChannel.createChannel(params: params) { channel, error in
-   guard let channel = channel, error == nil else {
+OpenChannel.createChannel(params: params) { openChannel, error in
+   guard let openChannel = openChannel, error == nil else {
        return // Handle error.
    }
 
@@ -267,19 +267,12 @@ OpenChannel.createChannel(params: params) { channel, error in
 Enter the open channel to send and receive messages.
 
 ```swift
-OpenChannel.getChannel(url: CHANNEL_URL) { openChannel, error in
-   guard let openChannel = openChannel, error == nil else {
-       return // Handle error.
+openChannel.enter { error in
+   guard error == nil else {
+      return
    }
-   // Call the instance method of the result object in the openChannel parameter of the callback method.
-
-   openChannel.enter { error in
-       guard error == nil else {
-           return
-       }
-       // The current user successfully enters the open channel,
-       // and can chat with other users in the channel by using APIs.
-   }
+   // The current user successfully enters the open channel,
+   // and can chat with other users in the channel by using APIs.
 }
 ```
 
@@ -305,13 +298,13 @@ openChannel.sendUserMessage(MESSAGE) { userMessage, error in
 
 ### Step 9: Receive a message
 
-Add the `OpenChannelDelegate.channel(_:didReceive:)` [event delegate](https://sendbird.com/docs/chat/v4/ios/guides/event-delegate#2-add-and-remove-a-channel-delegate) using the `SendbirdChat.add(delegate:identifier:)` method so that you can receive the message you just sent to the channel. You can also see the message on our dashboard.
+Add the `OpenChannelDelegate.channel(_:didReceive:)` [event delegate](https://sendbird.com/docs/chat/v4/ios/guides/event-delegate#2-add-and-remove-a-channel-delegate) using the `SendbirdChat.addChannelDelegate(_:identifier:)` method so that you can receive the message you just sent to the channel. You can also see the message on our dashboard.
 
 ```swift
 class ViewController: UIViewController, OpenChannelDelegate {
    override func viewDidLoad() {
        super.viewDidLoad()
-       SendbirdChat.add(self, identifier: CLASS_IDENTIFIER) // Replace  CLASS_IDENTIFIER with a unique identifier for this delegate.
+       SendbirdChat.addChannelDelegate(self, identifier: CLASS_IDENTIFIER) // Replace  CLASS_IDENTIFIER with a unique identifier for this delegate.
    }
 
    func channel(_ channel: BaseChannel, didReceive message: BaseMessage) {

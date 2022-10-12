@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.0.15 (Oct 12, 2022)
+* Added public  interface
+* Added synchronous initialize for SendbirdChat
+* Removed unused keys from body of MarkAsDelivered request
+
 ## 4.0.14 (Sep 28, 2022)
 * Added nicknameStartsWithFilter, nicknameExactMatchFilter feature in GroupChannelListQuery and its params
 * Implemented history of channel membership where clients can now track whether users have joined or left the channel (`MemberState.left` for left members of a `GroupChannel`)

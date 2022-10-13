@@ -1,7 +1,7 @@
 # Changelog
 
 ## v4.0.15 (Oct 12, 2022)
-* Added public  interface
+* Added public `make(_ json:)` interface
 * Added synchronous initialize for SendbirdChat
 * Removed unused keys from body of MarkAsDelivered request
 

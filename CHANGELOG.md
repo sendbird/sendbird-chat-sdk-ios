@@ -1,5 +1,92 @@
 # Changelog
 
+## v4.1.0 (Oct 14, 2022)
+
+# Features
+## Polls
+Polls is released :tada: Here’s where we think it will be really powerful.
+- Collect feedback and customer satisfaction
+- Drive engagement by receiving participants in preferences
+- Run surveys and quiz shows
+- And many more!
+## Scheduled messages
+Scheduled messages is released Here’s where we think it will be really useful.
+- Let your users queue their messages for the future
+- Set helpful reminders and notifications to nudge certain actions
+- And many more!
+## Improvements
+Please note that both Polls and Scheduled Messages are released as beta features. Thus specific parameters and properties may change to improve client’s overall experience.
+
+Stay tuned for updates as we are rolling out more exciting features and see below for exact specifications
+
+--------
+## Specification
+### Polls
+- Create
+    - `Poll.create(params: PollCreateParams, completionHandler: @escaping PollHandler)`
+    - `UserMessageCreateParams.pollId`
+- Read
+    - `Poll.get(params: PollRetrievalParams, completionHandler: @escaping PollHandler)`
+    - `SendbirdChat.createPollListQuery(params: PollListQueryParams)`
+    - `SendbirdChat.createPollListQuery(paramsBuilder: (PollListQueryParams) -> Void)`
+    - `GroupChannel.createPollListQuery(limit: UInt)`
+    - `UserMessage.poll`
+- Update
+    - `GroupChannel.updatePoll(pollId: Int64, params: PollUpdateParams, completionHandler: PollHandler?)`
+    - `GroupChannel.closePoll(pollId: Int64, completionHandler: PollHandler?)`
+- Delete
+    - `GroupChannel.deletePoll(pollId: Int64, completionHandler: SBErrorHandler?)`
+- Others:
+    - `Poll`
+    - `GroupChannel.getPollChangeLogs(token: String?, completionHandler: PollChangeLogsHandler?)()`
+    - `GroupChannel.getPollChangeLogs(timestamp: Int64, completionHandler: PollChangeLogsHandler?)()`
+    - `PollData`
+    - `GroupChannelDelegate.channel(_ channel: GroupChannel, didUpdatePoll event: PollUpdateEvent)`
+    - `GroupChannelDelegate.channel(_ channel: GroupChannel, didVotePoll event: PollVoteEvent)`
+    - `GroupChannelDelegate.channel(_ channel: GroupChannel, pollWasDeleted pollId: Int64)`
+### Options
+- Create
+    - `PollCreateParams.optionTexts`
+    - `GroupChannel.addPollOption(pollId: Int64, optionText: String, completionHandler: PollHandler?)`
+- Read
+    - `PollOption.getPollOption(params: PollOptionRetrievalParams, completionHandler: @escaping PollOptionHandler)`
+    - `SendbirdChat.createPollVoterListQuery(params: PollVoterListQueryParams)`
+    - `SendbirdChat.createPollVoterListQuery(paramsBuilder: (PollVoterListQueryParams) -> Void)`
+    - `GroupChannel.createPollVoterListQuery(pollId: Int64, pollOptionId: Int64, limit: UInt)`
+- Update
+    - `GroupChannel.updatePollOption(pollId: Int64, pollOptionId: Int64, optionText: String, completionHandler: PollHandler?)`
+    - `GroupChannel.votePoll(pollId: Int64, pollOptionIds: [Int64], completionHandler: PollVoteEventHandler)`
+- Delete
+    - `GroupChannel.deletePollOption(pollId: Int64, pollOptionId: Int64, completionHandler: SBErrorHandler?)`
+- Others:
+    - `PollOption`
+    - `PollStatus`
+    - `PollVoteEvent`
+    - `PollUpdateEvent`
+    - `CollectionEventSource.eventPollUpdated`
+    - `CollectionEventSource.eventPollVoted`
+    - `CollectionEventSource.eventPollChangeLog`
+--------
+### Scheduled Messages
+- Create
+    - `GroupChannel.createScheduledUserMessage()`
+    - `GroupChannel.createScheduledFileMessage()`
+- Read
+    - `ScheduledMessageListQuery`
+    - `BaseMessage.getScheduledMessage()`
+        - `ScheduledMessageRetrievalParams`
+- Update
+    - `GroupChannel.updateScheduledUserMessage()`
+    - `GroupChannel.updateScheduledFileMessage()`
+- Delete
+    - `GroupChannel.cancelScheduledMessage()`
+- Others
+    - `ScheduledInfo`
+    - `MessageSendingStatus.scheduled`
+    - `BaseMessage.scheduledInfo`
+    - `SendbirdChat.getTotalScheduledMessageCount()`
+        - `TotalScheduledMessageCountParams`
+
 ## v4.0.15 (Oct 12, 2022)
 * Added public `make(_ json:)` interface
 * Added synchronous initialize for SendbirdChat

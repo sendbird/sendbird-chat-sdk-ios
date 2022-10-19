@@ -23,7 +23,7 @@ The Sendbird Chat SDK for iOS allows you to add real-time chat into your client 
 
 ### How it works
 
-The Chat SDK provides the full functionality to provide a rich chat experience, implementing it begins by adding a user login, listing the available channels, selecting or creating an [open channel](https://sendbird.com/docs/chat/v4/ios/guides/open-channel) or [group channel](https://sendbird.com/docs/chat/v4/ios/guides/group-channel), and receive messages and other events through [channel event delegates](https://sendbird.com/docs/chat/v4/ios/guides/event-delegate) and the ability to send a message. Once this basic functionality is in place, congrats, you now have a chat app!
+The Chat SDK provides the full functionality to provide a rich chat experience, implementing it begins by adding a user login, listing the available channels, selecting or creating an [open channel](https://sendbird.com/docs/chat/v4/ios/channel/overview-channel#2-open-channel) or [group channel](https://sendbird.com/docs/chat/v4/ios/channel/overview-channel#2-group-channel), and receive messages and other events through [channel event delegates](https://sendbird.com/docs/chat/v4/ios/event-delegate/overview-event-delegate#1-event-delegate) and the ability to send a message. Once this basic functionality is in place, congrats, you now have a chat app!
 
 Once this is in place, take a look at [all the other features](https://sendbird.com/features/chat-messaging/features) that Sendbird supports and add what works best for your users.
 <br />
@@ -242,7 +242,7 @@ SendbirdChat.connect(userId: USER_ID, authToken: AUTH_TOKEN) { user, error in
 
 ### Step 6: Create a new open channel
 
-Create an open channel using the following codes. [Open channels](https://sendbird.com/docs/chat/v4/ios/guides/open-channel) are where all users in your Sendbird application can easily participate without an invitation.
+Create an open channel using the following codes. [Open channels](https://sendbird.com/docs/chat/v4/ios/channel/overview-channel#2-open-channel) are where all users in your Sendbird application can easily participate without an invitation.
 
 ```swift
 let params = OpenChannelCreateParams()
@@ -259,7 +259,7 @@ OpenChannel.createChannel(params: params) { openChannel, error in
 }
 ```
 
-**Note**: You can also create a group channel to send a message. To learn more, see [Create a channel](https://sendbird.com/docs/chat/v4/ios/guides/group-channel#2-create-a-channel) in the Group channel page.
+**Note**: You can also create a group channel to send a message. To learn more, see [Create a channel](https://sendbird.com/docs/chat/v4/ios/channel/creating-a-channel/create-a-channel#2-group-channel) in the Group channel page.
 <br />
 
 ### Step 7: Enter the channel
@@ -298,7 +298,7 @@ openChannel.sendUserMessage(MESSAGE) { userMessage, error in
 
 ### Step 9: Receive a message
 
-Add the `OpenChannelDelegate.channel(_:didReceive:)` [event delegate](https://sendbird.com/docs/chat/v4/ios/guides/event-delegate#2-add-and-remove-a-channel-delegate) using the `SendbirdChat.addChannelDelegate(_:identifier:)` method so that you can receive the message you just sent to the channel. You can also see the message on our dashboard.
+Add the `OpenChannelDelegate.channel(_:didReceive:)` [event delegate](https://sendbird.com/docs/chat/v4/ios/event-delegate/managing-channel-delegates/add-or-remove-a-channel-delegate) using the `SendbirdChat.addChannelDelegate(_:identifier:)` method so that you can receive the message you just sent to the channel. You can also see the message on our dashboard.
 
 ```swift
 class ViewController: UIViewController, OpenChannelDelegate {

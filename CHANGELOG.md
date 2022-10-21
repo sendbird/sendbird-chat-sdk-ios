@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.1.1 (Oct 21, 2022)
+
+- Fixed a bug where the request ID of the user message response sent through the API is empty
+- Fixed a bug when parsing other user's VOTE event
+- Fixed a bug where poll changeLog not being delivered in message collection
+- Changed PollListQueryParams.limit's defalut value 20 to 10
+- Fixed default value of user.isActive
+
 ## v4.1.0 (Oct 14, 2022)
 
 # Features

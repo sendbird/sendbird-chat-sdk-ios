@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.1.2 (Oct 27, 2022)
+
+* Fixed `MarkAsDelivered(remoteNotificationPayload: completionHandler:)` to work without being connected
+* Fixed a deserialized fileMessage's eKey not updating
+* Added reachability log
+* Fixed concurrency issue on user connection
+
 ## v4.1.1 (Oct 21, 2022)
 
 - Fixed a bug where the request ID of the user message response sent through the API is empty

@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.1.3 (Nov 02, 2022)
+
+### Improvements
+* Fixed concurrency issue in `CachedDataMap`
+
+
 ## v4.1.2 (Oct 27, 2022)
 
 * Fixed `MarkAsDelivered(remoteNotificationPayload: completionHandler:)` to work without being connected

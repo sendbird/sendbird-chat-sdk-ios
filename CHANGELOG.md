@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.1.4 (Nov 09, 2022)
+
+### Improvements
+* Fixed filtering logic (`joinedOnly`) in `GroupChannelListQuery.myMemberStateFilter`
+* Fixed an issue where deleted channels remain in the local cache
+* Applied atomicity to `cacheChannels`, `hasNext` in `GroupChannelCollection`
+* Fixed concurrency issue in `SafeDictionary`
+
 ## v4.1.3 (Nov 02, 2022)
 
 ### Improvements

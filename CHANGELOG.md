@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.1.5 (Nov 09, 2022)
+
+### Improvements
+* Fixed a crash issue when logging in RequestQueue
+
 ## v4.1.4 (Nov 09, 2022)
 
 ### Improvements

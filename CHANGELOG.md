@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.1.6 (Nov 16, 2022)
+
+### Improvements
+* Fixed a bug where `GroupChannelCollection::loadMore`'s `completionHandler` is not called under iOS 13
+
 ## v4.1.5 (Nov 09, 2022)
 
 ### Improvements

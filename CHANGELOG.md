@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.1.7 (Nov 29, 2022)
+
+### Improvements
+* Fixed a memory leak in the web socket engine
+* Added error log when using uninitialized Sendbird instance
+* Fixed to upsert channel change into database when receiving events
+* Fixed to use cached open channel when receiving system event
+
 ## v4.1.6 (Nov 16, 2022)
 
 ### Improvements

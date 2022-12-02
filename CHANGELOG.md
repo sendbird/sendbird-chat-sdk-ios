@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.1.8 (Dec 02, 2022)
+
+### Improvements
+* Added `urlSession(_:task:didCompleteWithError:)` method implementation to the native web socket engine
+
 ## v4.1.7 (Nov 29, 2022)
 
 ### Improvements

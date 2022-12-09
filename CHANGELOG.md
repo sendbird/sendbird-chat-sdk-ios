@@ -1,5 +1,172 @@
 # Changelog
 
+## v4.2.0 (Dec 9, 2022)
+
+### **Features**
+### **Pinned Message :pushpin:**
+Pinned Message is released. You can now maintain a special set of messages (up to 10 per channel) that you want everyone in the channel to share. It can be anything from announcements, surveys, upcoming events, and any many more. Pin your messages and never miss them!
+Stay tuned for updates as we are rolling out more exciting features and see below for exact specifications:point_down:
+#### **Specification**
+- Pin when sending a message
+    - `UserMessageCreateParams.isPinnedMessage: Bool = false`
+    - `FileMessageCreateParams.isPinnedMessage: Bool = false`
+- Pin existing message
+    - `GroupChannel.pinMessage(messageId:completionHandler:)`
+- Unpin a message
+    - `GroupChannel.unpinMessage(messageId:completionHandler:)`
+- Pinned messages
+    - `GroupChannel.lastPinnedMessage: BaseMessage? = nil`
+    - `GroupChannel.pinnedMessageIds: [Int64]? = nil`
+#### **We strongly recommend using Collections (Message, Channel) to implement Pinned Messages as it would automatically take care of numerous events out of the box when messages are created, updated, and deleted.**
+------
+### **Improvements**
+* Added `use_local_cache` to the request header
+* Removed internal logs
+
+## v4.1.8 (Dec 02, 2022)
+
+### Improvements
+* Added `urlSession(_:task:didCompleteWithError:)` method implementation to the native web socket engine
+
+## v4.1.7 (Nov 29, 2022)
+
+### Improvements
+* Fixed a memory leak in the web socket engine
+* Added error log when using uninitialized Sendbird instance
+* Fixed to upsert channel change into database when receiving events
+* Fixed to use cached open channel when receiving system event
+
+## v4.1.6 (Nov 16, 2022)
+
+### Improvements
+* Fixed a bug where `GroupChannelCollection::loadMore`'s `completionHandler` is not called under iOS 13
+
+## v4.1.5 (Nov 09, 2022)
+
+### Improvements
+* Fixed a crash issue when logging in RequestQueue
+
+## v4.1.4 (Nov 09, 2022)
+
+### Improvements
+* Fixed filtering logic (`joinedOnly`) in `GroupChannelListQuery.myMemberStateFilter`
+* Fixed an issue where deleted channels remain in the local cache
+* Applied atomicity to `cacheChannels`, `hasNext` in `GroupChannelCollection`
+* Fixed concurrency issue in `SafeDictionary`
+
+## v4.1.3 (Nov 02, 2022)
+
+### Improvements
+* Fixed concurrency issue in `CachedDataMap`
+
+
+## v4.1.2 (Oct 27, 2022)
+
+* Fixed `MarkAsDelivered(remoteNotificationPayload: completionHandler:)` to work without being connected
+* Fixed a deserialized fileMessage's eKey not updating
+* Added reachability log
+* Fixed concurrency issue on user connection
+
+## v4.1.1 (Oct 21, 2022)
+
+- Fixed a bug where the request ID of the user message response sent through the API is empty
+- Fixed a bug when parsing other user's VOTE event
+- Fixed a bug where poll changeLog not being delivered in message collection
+- Changed PollListQueryParams.limit's defalut value 20 to 10
+- Fixed default value of user.isActive
+
+## v4.1.0 (Oct 14, 2022)
+
+# Features
+## Polls
+Polls is released :tada: Here’s where we think it will be really powerful.
+- Collect feedback and customer satisfaction
+- Drive engagement by receiving participants in preferences
+- Run surveys and quiz shows
+- And many more!
+## Scheduled messages
+Scheduled messages is released Here’s where we think it will be really useful.
+- Let your users queue their messages for the future
+- Set helpful reminders and notifications to nudge certain actions
+- And many more!
+## Improvements
+Please note that both Polls and Scheduled Messages are released as beta features. Thus specific parameters and properties may change to improve client’s overall experience.
+
+Stay tuned for updates as we are rolling out more exciting features and see below for exact specifications
+
+--------
+## Specification
+### Polls
+- Create
+    - `Poll.create(params: PollCreateParams, completionHandler: @escaping PollHandler)`
+    - `UserMessageCreateParams.pollId`
+- Read
+    - `Poll.get(params: PollRetrievalParams, completionHandler: @escaping PollHandler)`
+    - `SendbirdChat.createPollListQuery(params: PollListQueryParams)`
+    - `SendbirdChat.createPollListQuery(paramsBuilder: (PollListQueryParams) -> Void)`
+    - `GroupChannel.createPollListQuery(limit: UInt)`
+    - `UserMessage.poll`
+- Update
+    - `GroupChannel.updatePoll(pollId: Int64, params: PollUpdateParams, completionHandler: PollHandler?)`
+    - `GroupChannel.closePoll(pollId: Int64, completionHandler: PollHandler?)`
+- Delete
+    - `GroupChannel.deletePoll(pollId: Int64, completionHandler: SBErrorHandler?)`
+- Others:
+    - `Poll`
+    - `GroupChannel.getPollChangeLogs(token: String?, completionHandler: PollChangeLogsHandler?)()`
+    - `GroupChannel.getPollChangeLogs(timestamp: Int64, completionHandler: PollChangeLogsHandler?)()`
+    - `PollData`
+    - `GroupChannelDelegate.channel(_ channel: GroupChannel, didUpdatePoll event: PollUpdateEvent)`
+    - `GroupChannelDelegate.channel(_ channel: GroupChannel, didVotePoll event: PollVoteEvent)`
+    - `GroupChannelDelegate.channel(_ channel: GroupChannel, pollWasDeleted pollId: Int64)`
+### Options
+- Create
+    - `PollCreateParams.optionTexts`
+    - `GroupChannel.addPollOption(pollId: Int64, optionText: String, completionHandler: PollHandler?)`
+- Read
+    - `PollOption.getPollOption(params: PollOptionRetrievalParams, completionHandler: @escaping PollOptionHandler)`
+    - `SendbirdChat.createPollVoterListQuery(params: PollVoterListQueryParams)`
+    - `SendbirdChat.createPollVoterListQuery(paramsBuilder: (PollVoterListQueryParams) -> Void)`
+    - `GroupChannel.createPollVoterListQuery(pollId: Int64, pollOptionId: Int64, limit: UInt)`
+- Update
+    - `GroupChannel.updatePollOption(pollId: Int64, pollOptionId: Int64, optionText: String, completionHandler: PollHandler?)`
+    - `GroupChannel.votePoll(pollId: Int64, pollOptionIds: [Int64], completionHandler: PollVoteEventHandler)`
+- Delete
+    - `GroupChannel.deletePollOption(pollId: Int64, pollOptionId: Int64, completionHandler: SBErrorHandler?)`
+- Others:
+    - `PollOption`
+    - `PollStatus`
+    - `PollVoteEvent`
+    - `PollUpdateEvent`
+    - `CollectionEventSource.eventPollUpdated`
+    - `CollectionEventSource.eventPollVoted`
+    - `CollectionEventSource.eventPollChangeLog`
+--------
+### Scheduled Messages
+- Create
+    - `GroupChannel.createScheduledUserMessage()`
+    - `GroupChannel.createScheduledFileMessage()`
+- Read
+    - `ScheduledMessageListQuery`
+    - `BaseMessage.getScheduledMessage()`
+        - `ScheduledMessageRetrievalParams`
+- Update
+    - `GroupChannel.updateScheduledUserMessage()`
+    - `GroupChannel.updateScheduledFileMessage()`
+- Delete
+    - `GroupChannel.cancelScheduledMessage()`
+- Others
+    - `ScheduledInfo`
+    - `MessageSendingStatus.scheduled`
+    - `BaseMessage.scheduledInfo`
+    - `SendbirdChat.getTotalScheduledMessageCount()`
+        - `TotalScheduledMessageCountParams`
+
+## v4.0.15 (Oct 12, 2022)
+* Added public `make(_ json:)` interface
+* Added synchronous initialize for SendbirdChat
+* Removed unused keys from body of MarkAsDelivered request
+
 ## 4.0.14 (Sep 28, 2022)
 * Added nicknameStartsWithFilter, nicknameExactMatchFilter feature in GroupChannelListQuery and its params
 * Implemented history of channel membership where clients can now track whether users have joined or left the channel (`MemberState.left` for left members of a `GroupChannel`)

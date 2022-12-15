@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.2.1 (Dec 15, 2022)
+
+### **Improvements**
+* Fixed a bug where channel filters (ex: `channelURLFilter`) were not applied properly in `GroupChannelCollection`
+
 ## v4.2.0 (Dec 9, 2022)
 
 ### **Features**

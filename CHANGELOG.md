@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.2.2 (Jan 04, 2023)
+
+### **Improvements**
+* Fixed a bug where unread count of channels is not updated in time
+* Changed to ensure reachability notification is called on the main thread
+
 ## v4.2.1 (Dec 15, 2022)
 
 ### **Improvements**

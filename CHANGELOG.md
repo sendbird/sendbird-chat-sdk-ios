@@ -1,4 +1,7 @@
 # Changelog
+## v4.2.3 (Jan 10, 2023)
+### **Improvements**
+* Improved database synchronization stability
 
 ## v4.2.2 (Jan 04, 2023)
 

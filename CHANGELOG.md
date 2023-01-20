@@ -1,5 +1,19 @@
 # Changelog
-## v4.2.3 (Jan 10, 2023)
+
+## v4.2.4 (Jan 20, 2023)
+
+
+### **Features**
+You can now set longer timeout value (Previously 10s) for session token expiry. (Default: 60s, Maximum: 1800s). This means that Sendbird SDK will wait longer for your new session token, making it easier for you to reconnect to our service. 
+
+- `@objc class func setSessionTokenRefreshTimeout(_ timeout: Int)`
+
+
+### **Improvements**
+* Fixed bug where `BaseChannelHandler.onChannelChanged` and `GroupChannelHandler.onPinnedMessageUpdated` are not being called when the pinned message is updated
+* Fixed channelURL filter not working when fetching pendingMessage
+* Fixed wrong channels being returned in copyMessage completionHandler
+
 ### **Improvements**
 * Improved database synchronization stability
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## v4.3.1 (Feb 15, 2023)
+
+- Added default value for `params` argument in each interface:
+    - `BaseChannel.getMessageChangeLogs(token:params:completionHandler)`
+    - `BaseChannel.getMessageChangeLogs(timestamp:params:completionHandler)`
+    - `SendbirdChat.getMyGroupChannelChangeLogs(token:params:completionHandler)`
+    - `SendbirdChat.getMyGroupChannelChangeLogs(timestamp:params:completionHandler)`
+- `registerDevicePushToken(_:unique:completionHandler:)` passes error to completionHandler when called before SendbirdChat is initialized
+- Fix a bug that the collection's callback is not called
+
 ## v4.3.0 (Feb 01, 2023)
 
 

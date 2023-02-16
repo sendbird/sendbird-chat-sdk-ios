@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.3.2 (Feb 16, 2023)
+
+- Fixed group channel querying with nickname filters (`nicknameContainsFilter`, `nicknameExactMatchFilter`, `nicknameExactMatchFilter`) to behave the same whether or not local caching is enabled
+
 ## v4.3.1 (Feb 15, 2023)
 
 - Added default value for `params` argument in each interface:

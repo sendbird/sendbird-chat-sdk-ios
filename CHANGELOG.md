@@ -1,5 +1,35 @@
 # Changelog
 
+## v4.4.0 (Feb 22, 2023)
+
+### **Features**
+
+### Disconnect Websocket only
+
+When you call `SendbirdChat.disconnect`, it disconnects the WebSocket and clears local cache. You can think of it as logging out.
+
+In some cases, you need to only disconnect the WebSocket. You can now do it by calling `SendbirdChat.disconnectWebSocket`.
+It only disconnects the WebSocket and preserves the local cache.
+```swift
+SendbirdChat.disconnectWebSocket {
+    // onDisconnected
+}
+```
+To connect again after disconnecting with `disconnectWebSocket()`,
+use [SendbirdChat.connect()](https://sendbird.com/docs/chat/v4/ios/application/authenticating-a-user/authentication#2-connect-to-the-sendbird-server-with-a-user-id).
+```swift
+SendbirdChat.connect(userId: userId) { user, error in
+    if let user = user {
+        // onConnected
+    } else {
+        // Handle error.
+    }
+}
+```
+
+### **Improvements**
+- Fixed to prevent initializing SendbirdChat multiple times with same `applicationId` and `isLocalCachingEnabled`
+
 ## v4.3.2 (Feb 16, 2023)
 
 - Fixed group channel querying with nickname filters (`nicknameContainsFilter`, `nicknameExactMatchFilter`, `nicknameExactMatchFilter`) to behave the same whether or not local caching is enabled

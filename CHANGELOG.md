@@ -1,5 +1,38 @@
 # Changelog
 
+## v4.5.0 (Mar 03, 2023)
+
+### **Features**
+
+### **Polls in Open Channel**
+Polls is now supported in both Open Channels and Group Channels!
+
+#### **Specification**
+Moved following methods from `GroupChannel` to `BaseChannel`:
+- func updatePoll(pollId: Int64, params: PollUpdateParams, completionHandler: PollHandler?)
+- func deletePoll(pollId: Int64, completionHandler: SBErrorHandler?)
+- func closePoll(pollId: Int64, completionHandler: PollHandler?)
+- func addPollOption(pollId: Int64, optionText: String, completionHandler: PollHandler?)
+- func updatePollOption(pollId: Int64, pollOptionId: Int64, optionText: String, completionHandler: PollHandler?)
+- func deletePollOption(pollId: Int64, pollOptionId: Int64, completionHandler: SBErrorHandler?)
+- func votePoll(pollId: Int64, pollOptionIds: [Int64], completionHandler: PollVoteEventHandler)
+- func getPollChangeLogs(token: String?, completionHandler: PollChangeLogsHandler?)
+- func getPollChangeLogs(timestamp: Int64, completionHandler: PollChangeLogsHandler?)
+- func createPollListQuery(limit: UInt = 20) -> PollListQuery? 
+- func createPollVoterListQuery(pollId: Int64, pollOptionId: Int64, limit: UInt = 20) -> PollVoterListQuery
+
+Added the following interfaces in OpenChannelDelegate:
+- func channel(_ channel: OpenChannel, didUpdatePoll event: PollUpdateEvent)
+- func channel(_ channel: OpenChannel, didVotePoll event: PollVoteEvent)
+- func channel(_ channel: OpenChannel, pollWasDeleted pollId: Int64) 
+
+Added the following interfaces in Polls:
+- `Poll.serialize()` 
+- `Poll.build(fromSerializedData:)` 
+
+### **Improvements**
+- Fixed a bug where the size of the DB file was not being updated after disconnection
+
 ## v4.4.0 (Feb 22, 2023)
 
 ### **Features**

@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.5.1 (Mar 07, 2023)
+
+### **Improvements**
+- Fixed not to delete pendingPushToken after applying cache configuration
+
 ## v4.5.0 (Mar 03, 2023)
 
 ### **Features**

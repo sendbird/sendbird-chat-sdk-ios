@@ -1,5 +1,23 @@
 # Changelog
 
+## v4.5.2 (Mar 08, 2023)
+
+## Features
+### Encrypting Local Caching
+Locally saved chats in your user's device can now be encrypted with `FileProtectionType.completeUnlessOpen` protection level. 
+To enable this protection, please refer to below guide and API Reference. 
+
+### Brief guide
+When creating `InitParams`, set `LocalCacheConfig.isEncryptionEnabled` to `true`. This option is turned off by default, so you don't have to set anything up if you don't intend to use it.
+```Swift
+let localCacheConfig = LocalCacheConfig(isEncryptionEnabled: true)
+let initParams = InitParams(
+    applicationId: appId,
+    isLocalCachingEnabled: true,
+    localCacheConfig: localCacheConfig
+)
+```
+
 ## v4.5.1 (Mar 07, 2023)
 
 ### **Improvements**

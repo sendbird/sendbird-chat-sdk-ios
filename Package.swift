@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SendbirdChatSDK",
-            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.5.1/SendbirdChatSDK.xcframework.zip",
-            checksum: "695df19ef4749eb918609405bce46738ba8745706fc8d957eb88bcec76efd45c"
+            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.5.2/SendbirdChatSDK.xcframework.zip",
+            checksum: "9e07d107555206a094465ae1c069d12859a4b713dddca41fd41161acf120ffba"
         ),
     ]
 )

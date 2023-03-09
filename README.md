@@ -6,6 +6,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Commercial License](https://img.shields.io/badge/License-Commercial-brightgreen.svg)](https://github.com/sendbird/sendbird-chat-sdk-ios/blob/master/LICENSE.md)
 
+> :warning: **DO NOT USE THESE VERSIONS**: `v4.3.1`, `v4.3.2`, `v4.4.0`, `v4.5.0`. There may be a problem registering a new push token.
+
 ## Table of contents
 
 1.  [Introduction](#introduction)

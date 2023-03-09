@@ -25,6 +25,8 @@ let initParams = InitParams(
 
 ## v4.5.0 (Mar 03, 2023)
 
+> :warning: **DO NOT USE THIS VERSION**: There may be a problem registering a new push token.
+
 ### **Features**
 
 ### **Polls in Open Channel**
@@ -58,6 +60,8 @@ Added the following interfaces in Polls:
 
 ## v4.4.0 (Feb 22, 2023)
 
+> :warning: **DO NOT USE THIS VERSION**: There may be a problem registering a new push token.
+
 ### **Features**
 
 ### Disconnect Websocket only
@@ -88,9 +92,13 @@ SendbirdChat.connect(userId: userId) { user, error in
 
 ## v4.3.2 (Feb 16, 2023)
 
+> :warning: **DO NOT USE THIS VERSION**: There may be a problem registering a new push token.
+
 - Fixed group channel querying with nickname filters (`nicknameContainsFilter`, `nicknameExactMatchFilter`, `nicknameExactMatchFilter`) to behave the same whether or not local caching is enabled
 
 ## v4.3.1 (Feb 15, 2023)
+
+> :warning: **DO NOT USE THIS VERSION**: There may be a problem registering a new push token.
 
 - Added default value for `params` argument in each interface:
     - `BaseChannel.getMessageChangeLogs(token:params:completionHandler)`

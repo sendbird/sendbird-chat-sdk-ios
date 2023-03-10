@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.5.3 (Mar 10, 2023)
+
+- Fixed an issue where push notification doesn't get delivered to some users
+
 ## v4.5.2 (Mar 08, 2023)
 
 ## Features

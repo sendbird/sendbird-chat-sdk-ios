@@ -1,5 +1,22 @@
 # Changelog
 
+## v4.6.0 (Mar 14, 2023)
+
+### **Features**
+### **Set your own Local Caching DB size**
+You can now control the size of your local cache. Starting from 64mb, decide how much you want to store (Default: 256mb).
+Once the size limit is reached, the SDK will automatically remove messages and channels with pre-specified logic (`clearOrder`)  so that you don't have to actively manage it.
+- Added DB size related properties in `LocalCacheConfig`
+```swift
+let localCacheConfig = LocalCacheConfig()
+localCacheConfig.maxSize = 256
+localCacheConfig.clearOrder = .messageCollectionAccessedAt
+```
+- Added SendbirdChat.getTotalUnreadMessageCountWithFeed(params:completionHandler:)
+    - Deprecated SendbirdChat.getTotalUnreadMessageCount(params:completionHandler:)
+- Added UserEventDelegate.didUpdateTotalUnreadMessageCount(unreadMessageCount:)
+    - Deprecated UserEventDelegate.didUpdateTotalUnreadMessageCount(_:totalCountByCustomType:)
+
 ## v4.5.3 (Mar 10, 2023)
 
 - Fixed an issue where push notification doesn't get delivered to some users

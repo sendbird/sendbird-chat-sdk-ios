@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.6.1 (Mar 20, 2023)
+
+### Improvements
+- Fixed an issue where network wouldn't properly reconnect when connect() is called again with a different user id
+
 ## v4.6.0 (Mar 14, 2023)
 
 ### **Features**

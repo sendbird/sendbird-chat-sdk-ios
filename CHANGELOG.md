@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.6.2 (Mar 24, 2023)
+
+### Improvements
+- Fixed group channel collection's channelList not being updated properly after hiding a channel
+- Added ephemeral support for open channels
+- Fixed a bug where the 'Allowed domains' denies the connection from the SDK
+
 ## v4.6.1 (Mar 20, 2023)
 
 ### Improvements

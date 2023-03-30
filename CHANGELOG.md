@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.6.3 (Mar 30, 2023)
+
+- Fixed a bug where a group channel collection could return duplicated channels
+- Improved local caching hit ratio
+
 ## v4.6.2 (Mar 24, 2023)
 
 ### Improvements

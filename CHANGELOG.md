@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.6.4 (Apr 04, 2023)
+
+- Fixed an error where the previous user's channels remained in the database
+
 ## v4.6.3 (Mar 30, 2023)
 
 - Fixed a bug where a group channel collection could return duplicated channels

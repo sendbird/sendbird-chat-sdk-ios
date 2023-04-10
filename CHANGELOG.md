@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.6.5 (Apr 10, 2023)
+
+- Fixed a bug where a group channel collection returns channels for other user who used the device
+
 ## v4.6.4 (Apr 04, 2023)
 
 - Fixed an error where the previous user's channels remained in the database

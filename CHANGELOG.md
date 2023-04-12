@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.6.6 (Apr 12, 2023)
+
+### Improvements
+- Changed default value of nextResultSize and prevResultSize in MessageCollection to 40
+- Stability improvements
+
 ## v4.6.5 (Apr 10, 2023)
 
 - Fixed a bug where a group channel collection returns channels for other user who used the device

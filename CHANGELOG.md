@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.6.7 (Apr 19, 2023)
+
+### Improvements
+- Improved stability
+
 ## v4.6.6 (Apr 12, 2023)
 
 ### Improvements

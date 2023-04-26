@@ -1,5 +1,17 @@
 # Changelog
 
+## v4.7.0 (Apr 26, 2023)
+
+### **Features**
+### (Moderation) Automatically detect when user is unmuted
+You can now automatically detect when a muted user is unmuted by leveraging `MessageCollection`.
+Clients will now receive `MessageCollectionDelegate.messageCollection(_:context:updatedChannel:)` with `CollectionEventSource.eventUserUnmuted` when an user is unmuted after their muted duration has expired, on top of explict unmute calls. This now means that you can easily transition user’s experience and allow them to chat even more seamlessly.
+Note that this is a MessageCollections only feature! We recommend all of our clients to give it a try if you haven’t : )
+
+### Improvements
+- Updated iOS deployment target to 11.0 for Xcode 14.1+
+- Fixed crash issue that occurred when encoding GroupChannel
+
 ## v4.6.7 (Apr 19, 2023)
 
 ### Improvements

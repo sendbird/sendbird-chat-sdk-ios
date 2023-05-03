@@ -1,5 +1,29 @@
 # Changelog
 
+## v4.8.0 (May 03, 2023)
+
+### **Features**
+### PinnedMessageListQuery
+You can now retrieve all pinned messages within a GroupChannel by the `PinnedMessageListQuery`.
+
+* Added `PinnedMessage`
+* Added `PinnedMessageListQuery`, `PinnedMessageListQueryParams`
+* Added `createPinnedMessageListQuery(params:)` for `GroupChannel` object
+
+```swift
+let queryParams = PinnedMessageListQueryParams { params in
+    params.limit = 20
+    // Set other properties in `params`
+}
+self.query = channel.createPinnedMessageListQuery(queryParams)
+self.query.loadNextPage { messages, error in
+    // Handle result
+}
+```
+
+### **Improvements**
+- Added URL encoding for `userId` with non-ascii characters 
+
 ## v4.7.0 (Apr 26, 2023)
 
 ### **Features**

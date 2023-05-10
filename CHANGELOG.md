@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.8.1 (May 10, 2023)
+
+### **Improvements**
+- Fixed a crash issue that occurred when encoding `User`
+
 ## v4.8.0 (May 03, 2023)
 
 ### **Features**

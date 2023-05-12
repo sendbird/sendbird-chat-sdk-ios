@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.8.2 (May 12, 2023)
+
+- Added `includeParentMessageInfo` to `PinnedMessageListQueryParams`
+
 ## v4.8.1 (May 10, 2023)
 
 ### **Improvements**

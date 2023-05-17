@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.8.4 (May 17, 2023)
+
+### Improvements
+- Improved stability
+
 ## v4.8.3 (May 16, 2023)
 
 ### Improvements

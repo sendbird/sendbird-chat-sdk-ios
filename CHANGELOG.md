@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.8.5 (May 24, 2023)
+
+### Improvements
+- Fixed `MessageCollectionDelegate.messageCollection(_:context:channel:updatedMessages:)` to be invoked after sending a message via API fallback
+- Fixed `GroupChannelCollectionDelegate.channelCollection(_:context:addedChannels:)` to not be invoked for added messages until `loadMore` is called in `GroupChannelCollection`
+
 ## v4.8.4 (May 17, 2023)
 
 ### Improvements

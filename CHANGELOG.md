@@ -1,5 +1,14 @@
 # Changelog
 
+## v4.8.6 (Jun 07, 2023)
+
+### Improvements
+- Fixed not to hang main thread when requesting huge gap API
+- Fixed issues in `MessageCollection.startCollection` and `NotificationCollection.startCollection`
+  - Fixed an error that returned duplicate cache messages
+  - Fixed an issue that did not fetch cache messages based on starting point
+- Resolved DB migration issue
+
 ## v4.8.5 (May 24, 2023)
 
 ### Improvements

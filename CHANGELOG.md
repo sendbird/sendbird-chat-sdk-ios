@@ -1,5 +1,31 @@
 # Changelog
 
+## v4.9.0 (Jun 09, 2023)
+
+### **Features**
+### MultipleFilesMessage
+You can send a `MultipleFilesMessage` that contains multiple files in a single message via `GroupChannel.sendMultipleFilesMessage(params:fileUploadHandler:completionHandler:)` 
+- Added `MultipleFilesMessage`.
+- Added `GroupChannel.sendMultipleFilesMessage`, `MultipleFilesMessageCreateParams`, `UploadableFileInfo` and `UploadedFileInfo`.
+- Added `MultipleFilesMessageHandler` and `FileUploadHandler`. 
+- Added `SendbirdChat.getMultipleFilesMessageFileCountLimit()` that indicates the maximum count of files that can be included in a single message.
+
+```swift
+let params = MultipleFilesMessageCreateParams(
+    uploadableFileInfoList: [UploadableFileInfo(file: file), UploadableFileInfo(fileURL: fileUrl)]
+)
+
+channel.sendMultipleFilesMessage(
+    params: params,
+    fileUploadHandler = { requestId, index, uploadableFileInfo, error ->
+        // handle the upload result of each UploadableFileInfo. 
+    },
+    completionHandler = { message, error ->
+        // handle the result of sending MultipleFilesMessage.
+    }
+)
+```
+
 ## v4.8.6 (Jun 07, 2023)
 
 ### Improvements

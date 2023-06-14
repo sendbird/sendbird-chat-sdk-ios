@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.9.1 (Jun 14, 2023)
+### **IMPORTANT NOTICE**
+```diff
+iOS Chat SDK version `4.9.0` has a bug where FileMessage is not received. Please skip version `4.9.0`, and update to version **`4.9.1`** or above instead.
+```
+### **Improvements**
+- Fixed FileMessage being parsed as MultipleFilesMessage
+
 ## v4.9.0 (Jun 09, 2023)
 
 ### **Features**

@@ -8,7 +8,7 @@
 
 > :warning: **DO NOT USE THESE VERSIONS**: `v4.3.1`, `v4.3.2`, `v4.4.0`, `v4.5.0`. There is a bug where the pending push token is removed after connecting a user.
 
-> :warning: **DO NOT USE THIS VERSION**: `v4.9.0`. There is a bug where FileMessage is not received when sent.
+> :warning: **DO NOT USE THIS VERSION**: `v4.9.0`. There is a bug where FileMessage is not received.
 
 ## Table of contents
 

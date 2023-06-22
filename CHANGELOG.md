@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.9.2 (Jun 22, 2023)
+### **Improvements**
+- Fixed a security flaw related to the connection
+- Fixed a bug where a group channel can be filtered out when a message in the channel is removed
+- Improved stability
+
 ## v4.9.1 (Jun 14, 2023)
 ### **IMPORTANT NOTICE**
 ```diff

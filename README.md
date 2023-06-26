@@ -320,14 +320,14 @@ class ViewController: UIViewController, OpenChannelDelegate {
 <br />
 
 ## Chat SDK Size
-The below is an estimated size of Chat SDK as of `v4.9.2`.
+The below is the size of Chat SDK as of `v4.9.2`.
 
 Sizes for other device types are more or less follow the sizes for iPhone 14 Pro.
 
 | DEVICE TYPE   | DOWNLOAD SIZE | INSTALL SIZE |
 |---------------|---------------|--------------|
 | Universal     | 6.52 MB       | 8.17 MB      |
-| iPhone 14 Pro | 2.57 MB       | 8.05 MB      |
+| iPhone 14 Pro or other devices | 2.57 MB       | 8.05 MB      |
 
 
 

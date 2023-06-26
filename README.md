@@ -319,6 +319,18 @@ class ViewController: UIViewController, OpenChannelDelegate {
 
 <br />
 
+## Chat SDK Size
+The below is an estimated size of Chat SDK as of `v4.9.2`.
+
+Sizes for other device types are more or less follow the sizes for iPhone 14 Pro.
+
+| DEVICE TYPE   | DOWNLOAD SIZE | INSTALL SIZE |
+|---------------|---------------|--------------|
+| Universal     | 6.52 MB       | 8.17 MB      |
+| iPhone 14 Pro | 2.57 MB       | 8.05 MB      |
+
+
+
 ## We are hiring
 
 At Sendbird, we are a diverse group of humble, friendly, and hardworking individuals united by a shared purpose to build the next generation of mobile & social technologies, across chat, voice, and video, that are changing the way we work and live. We're always looking for great people to join our team. [Check out our careers page](https://sendbird.com/careers) for more information.

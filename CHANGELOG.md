@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.9.3 (Jun 27, 2023)
+### **Improvements**
+- Fixed a bug where GroupChannelDelegate method func `channelDidUpdateTypingStatus(_ channel: GroupChannel)` was not being called when a typer becomes idle
+
 ## v4.9.2 (Jun 22, 2023)
 ### **Improvements**
 - Fixed a security flaw related to the connection

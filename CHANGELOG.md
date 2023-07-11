@@ -1,4 +1,7 @@
 # Changelog
+## v4.9.4 (Jul 11, 2023) 
+### **Improvements**
+- Added `isBot` property in `User` model to identify whether the sender is a Bot
 
 ## v4.9.3 (Jun 27, 2023)
 ### **Improvements**

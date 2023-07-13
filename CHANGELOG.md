@@ -1,4 +1,11 @@
 # Changelog
+
+## v4.9.5 (Jul 13, 2023) 
+### **Improvements**
+- Resolved the inconsistency between WebSocket connection state and network reachability
+- Fixed a crash that can happen when SessionExpiredEvent is received
+- Improved stability
+
 ## v4.9.4 (Jul 11, 2023) 
 ### **Improvements**
 - Added `isBot` property in `User` model to identify whether the sender is a Bot

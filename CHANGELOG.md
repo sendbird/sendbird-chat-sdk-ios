@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.9.6 (Jul 21, 2023)
+### **Improvements**
+- Fixed a bug where the group channel changelogs did not update the group channel metadata
+
 ## v4.9.5 (Jul 13, 2023) 
 ### **Improvements**
 - Resolved the inconsistency between WebSocket connection state and network reachability

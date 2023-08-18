@@ -1,5 +1,22 @@
 # Changelog
 
+## v4.10.0 (Aug 18, 2023)
+### **Features**
+- You can mark push notifications as delivered within the SDK, tracking delivery status.
+  - Added `SendbirdChat.markPushNotificationAsDelivered`.
+```swift
+SendbirdChat.markPushNotificationAsDelivered(remoteNotificationPayload: payload)
+```
+
+- Added 'SendbirdChat.authenticateFeed' for Sendbird Notifications
+- Added 'SendbirdChat.refreshNotificationCollections' for Sendbird Notifications
+
+### **Improvements**
+- Fixed a bug where the group channel changelogs did not update the group channel metadata
+- Added `copyMultipleFilesMessage(_:toTargetChannel:completionHandler:)`
+- Added `resendMultipleFilesMessage(_:fileUploadHandler:completionHandler:)`
+- Stability improvements.
+
 ## v4.9.6 (Jul 21, 2023)
 ### **Improvements**
 - Fixed a bug where the group channel changelogs did not update the group channel metadata

@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.11.1 (Sep 15, 2023)
+
+### **Improvements**
+- Fixed an issue where `MessageCollection` doesn't update messages when reconnected.
+- Stability improvements.
+
 ## v4.11.0 (Sep 01, 2023)
 
 ### **Improvements**

@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     'Sendbird' => 'sha.sdk_deployment@sendbird.com',
     'Jed Gyeong' => 'jed.gyeong@sendbird.com',
     'Celine Moon' => 'celine.moon@sendbird.com',
-    'Damon Park' => 'damon.park@sendbird.com'
+    'Damon Park' => 'damon.park@sendbird.com',
     'Jaesung Lee' => 'jaesung.lee@sendbird.com'
   }
   s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.11.1/SendbirdChatSDK.zip", :sha1 => "0b05eb5364131be160146bc292c79055dc09407c" }

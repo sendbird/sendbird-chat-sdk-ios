@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.12.1 (Oct 12, 2023)
+
+### **Improvements**
+- Fixed a bug where the callback of `__getUIKitConfiguration()` can be called twice.
+- Stability improvements.
+
 ## v4.12.0 (Sep 25, 2023)
 
 ### **Improvements**

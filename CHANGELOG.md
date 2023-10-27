@@ -1,5 +1,16 @@
 # Changelog
 
+## v4.12.2 (Oct 27, 2023)
+
+- Added methods on `GroupChannel`
+  - `getDeliveryStatus(includeAllMembers:)`
+  - `getDeliveryStatusAsObjects(includeAllMembers:)`
+  - `getReadStatusAsObjects(includeAllMembers:)`
+- Added `DeliveryStatus`, `ReadStatus`
+- Fixed Syntax error in SQL statement
+- Added `extendedMessagePayload` property to `BaseMessage`
+- Improved stability
+
 ## v4.12.1 (Oct 12, 2023)
 
 ### **Improvements**

@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.12.3 (Oct 31, 2023)
+
+- Improved stability
+
 ## v4.12.2 (Oct 27, 2023)
 
 - Added methods on `GroupChannel`

@@ -1,5 +1,15 @@
 # Changelog
 
+## v4.13.0 (Nov 24, 2023)
+
+### **Improvements**
+- Added `logCustom()` in `FeedChannel` to log custom stat
+- Added `NotificationMessageStatus` to represent whether the message was read or not
+- Changed to not change channel's `isDirty` property when app switches from background to foreground
+- Removed rate limit from markAsRead
+- Improved logic to call the API in unnecessary situations in the `getChannel` while using local caching
+- Improved stability
+
 ## v4.12.3 (Oct 31, 2023)
 
 - Improved stability

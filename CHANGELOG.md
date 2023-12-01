@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.13.1 (Dec 01, 2023)
+
+### **Improvements**
+- Fixed a bug where the order of the messages from the `messageCollection(_:context:channel:addedMessages:)` delegate was not sequential
+
 ## v4.13.0 (Nov 24, 2023)
 
 ### **Improvements**

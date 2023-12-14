@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.13.2 (Dec 14, 2023)
+
+### **Improvements**
+
+- Fixed group channel's metadata being overwritten by group channel changelog when using local caching without turning on the app attribute `enable_changelog_metadata`
+- Updated SendbirdChatSDK licenses
+- improve Stability
+
 ## v4.13.1 (Dec 01, 2023)
 
 ### **Improvements**

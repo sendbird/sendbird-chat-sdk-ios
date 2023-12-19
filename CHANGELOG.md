@@ -1,5 +1,16 @@
 # Changelog
 
+## v4.14.0 (Dec 19, 2023)
+
+### **Improvements**
+
+- Added `Feedback` and `Feedback.Status` model classes
+- Added public interfaces methods in `BaseMessage` 
+   - Added `submitFeedback(rating:comment:completionHandler:)`
+   - Added `updateFeedback(rating:comment:completionHandler:)`
+   - Added `deleteFeedback(completionHandler:)`
+- Fixed a bug where the `messageCollection(_:context:channel:addedMessages:)` is not invoked after reconnecting if the `MessageCollection` object was created for an empty group channel
+
 ## v4.13.2 (Dec 14, 2023)
 
 ### **Improvements**

@@ -1,5 +1,13 @@
 # Changelog
 
+## v4.14.1 (Dec 21, 2023)
+
+### **Improvements**
+
+- Added `Form`, `FormField` and `FormFieldAnswer` model classes.
+- Added `submitForm(form:completionHandler:)` public interface.
+- Added `forms` and `suggestedReplies` properties in `BaseMessage`.
+
 ## v4.14.0 (Dec 19, 2023)
 
 ### **Improvements**

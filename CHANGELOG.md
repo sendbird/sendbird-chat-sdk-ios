@@ -1,5 +1,20 @@
 # Changelog
 
+## v4.15.1 (Jan 12, 2024)
+
+- Initialization improving
+  - Added `needsSynchronous` property in `InitParams` class
+  - Added `init(applicationId:isLocalCachingEnabled:localCacheConfig:logLevel:appVersion:needsSynchronous:)` method in `InitParams` class
+  - Added `InitializationState` enum
+  - Added `executeOrWaitForInitialization(executeHandler:)` method in SendbirdChat
+  - Deprecated `initializeSynchronously(params: InitParams)` method in `SendbirdChat`.
+    - Set `needsSynchronous` in `InitParams` to `true` and use `initialize(params:migrationStartHandler:completionHandler:)` instead.
+  - Modified qos priority of local caching migration queue
+- Added `inMemoryUserInfo` property in `BaseMessage`
+- Fixed feedback not working correctly
+- Added localizedFailureReason for `ChatError.connectionCanceled` error when the app moved to background while connecting
+- Improved stability
+
 ## v4.15.0 (Jan 12, 2024)
 
 ### **Improvements**

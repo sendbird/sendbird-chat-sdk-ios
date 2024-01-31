@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.15.2 (Jan 31, 2024)
+
+- Improved stability
+
 ## v4.15.1 (Jan 12, 2024)
 
 - Initialization improving

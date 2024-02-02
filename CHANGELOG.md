@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.15.3 (Feb 02, 2024)
+
+- Improved unread message count logic
+
 ## v4.15.2 (Jan 31, 2024)
 
 - Improved stability

@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.15.4 (Feb 14, 2024)
+
+- Fixed a bug where the stat collector is not enabled when the `authenticateFeed()` is used
+- Fixed a bug where the unread message count of feed channel becomes zero when the SDK receives a message from the chat notification channel
 ## v4.15.3 (Feb 02, 2024)
 
 - Improved unread message count logic

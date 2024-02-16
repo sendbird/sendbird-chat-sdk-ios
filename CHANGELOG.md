@@ -1,5 +1,14 @@
 # Changelog
 
+## v4.16.0 (Feb 16, 2024)
+
+### New Interfaces 
+- Added the `notificationPriority` property to `BaseMessage` class
+
+### Improvements
+- Fixed `.data` of `MultipleFilesMessage`
+- Fixed `UploadedFileInfo.thumbnail.url` returning a `plainURL` without `eKey` when file encryption attribute is ON 
+
 ## v4.15.4 (Feb 14, 2024)
 
 - Fixed a bug where the stat collector is not enabled when the `authenticateFeed()` is used

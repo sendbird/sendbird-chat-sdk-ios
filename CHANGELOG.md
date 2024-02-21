@@ -1,5 +1,10 @@
 # Changelog
 
+## v4.16.1 (Feb 21, 2024)
+
+### Improvements
+- Fix an issue where the `completionHandler` of `sendFileMessage` would be called multiple times. 
+
 ## v4.16.0 (Feb 16, 2024)
 
 ### New Interfaces 

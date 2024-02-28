@@ -1,5 +1,26 @@
 # Changelog
 
+## v4.17.0 (Feb 28, 2024)
+
+### New Interfaces
+- Added message template interfaces
+    - Added classes
+        - `MessageTemplateListParams` class
+        - `MessageTemplate` class
+        - `MessageTemplateInfo` class
+        - `MessageTemplateList` class
+    - Added functions
+        - `getMessageTemplateList(token:params:completionHandler:)` function in `SendbirdChat` class
+        - `getMessageTemplate(key:completionHandler:)` function in `SendbirdChat` class
+    - Added handlers 
+        - `MessageTemplateHandler` in `Handlers` class
+        - `MessageTemplateListHandler` in `Handlers` class
+    - Added `messageTemplateInfo` property in `AppInfo` class
+
+### Improvements
+- Fixed negative value setting case when backsync progress
+- Improved stability
+
 ## v4.16.1 (Feb 21, 2024)
 
 ### Improvements

@@ -1,5 +1,18 @@
 # Changelog
 
+## v4.18.0 (Mar 28, 2024)
+
+### New Interfaces
+- Added `keys` filter to `MessageTemplateListParams`
+- Added `markPushNotificationAsClicked(remoteNotificationPayload:completionHandler:)` to `SendbirdChat`
+- Added `markAsViewed(messages:)` to `FeedChannel`
+  - Deprecated `logImpression(messages:)` in `FeedChannel`
+- Added `logClicked(message:)` to `FeedChannel`
+
+### Improvements
+- Fixed a bug where the `myLastRead` was updated with the improper timestamp
+- Improved stability
+
 ## v4.17.0 (Feb 28, 2024)
 
 ### New Interfaces

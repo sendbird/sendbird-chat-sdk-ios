@@ -43,7 +43,7 @@ The minimum requirements for Chat SDK for iOS are:
 
 - `macOS`
 - `Xcode`
-- `At least one device running iOS 11.0 and later`
+- `At least one device running iOS 12.0 and later`
 - `Swift 5.0 or later` or `Objective-C`
 
 > **Note**: Sendbird server supports Transport Layer Security (TLS) from version 1.0 up to 1.3. For example, in the server regions where TLS 1.3 isn’t available, lower versions, sequentially from 1.2 to 1.0, will be supported for secure data transmission.
@@ -105,7 +105,7 @@ $ pod init
 2. A **Podfile** will be created in your project folder. Open the **Podfile** and modify the file like the following.
 
 ```bash
-# platform :ios, '11.0'
+# platform :ios, '12.0'
 
 target 'YOUR_PROJECT_NAME' do
    # Comment the next line if you don't want to use dynamic frameworks

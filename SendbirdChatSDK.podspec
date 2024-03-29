@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     'Celine Moon' => 'celine.moon@sendbird.com',
     "Tez Park" => "tez.park@sendbird.com",
     "Damon Park" => "damon.park@sendbird.com",
-    "Young Twang" => "young.hwang@sendbird.com",
+    "Young Hwang" => "young.hwang@sendbird.com",
     "Kai Lee" => "kai.lee@sendbird.com"
   }
   s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.18.0/SendbirdChatSDK.zip", :sha1 => "10c76278eb690d3a2de2ff360922ee241e572928" }

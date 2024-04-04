@@ -35,10 +35,10 @@ Pod::Spec.new do |s|
     'Sendbird' => 'sha.sdk_deployment@sendbird.com',
     'Jed Gyeong' => 'jed.gyeong@sendbird.com',
     'Celine Moon' => 'celine.moon@sendbird.com',
-    "Tez Park" => "tez.park@sendbird.com",
-    "Damon Park" => "damon.park@sendbird.com",
-    "Young Hwang" => "young.hwang@sendbird.com",
-    "Kai Lee" => "kai.lee@sendbird.com"
+    'Tez Park' => 'tez.park@sendbird.com',
+    'Damon Park' => 'damon.park@sendbird.com',
+    'Young Hwang' => 'young.hwang@sendbird.com',
+    'Kai Lee' => 'kai.lee@sendbird.com'
   }
   s.source       = { :http => \"https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v$VERSION/SendbirdChatSDK.zip\", :sha1 => \"$SHA1\" }
   s.requires_arc = true

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'SendbirdChatSDK'
-  s.version      = "4.19.0"
+  s.version      = "4.19.1"
   s.summary      = 'Sendbird Chat iOS Framework'
   s.description  = 'Messaging and Chat API for Mobile Apps and Websites'
   s.homepage     = 'https://sendbird.com'
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     'Young Hwang' => 'young.hwang@sendbird.com',
     'Kai Lee' => 'kai.lee@sendbird.com'
   }
-  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.19.0/SendbirdChatSDK.zip", :sha1 => "53b4adde0b77e6f536b3e566958b9dec75d4914a" }
+  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v4.19.1/SendbirdChatSDK.zip", :sha1 => "01687d5e228b7fbe72c020a265cac4b643f68214" }
   s.requires_arc = true
   s.platform = :ios, '12.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'
@@ -24,3 +24,4 @@ Pod::Spec.new do |s|
   s.ios.frameworks = ['UIKit', 'CFNetwork', 'Security', 'Foundation', 'MobileCoreServices', 'SystemConfiguration', 'CoreFoundation']
   s.ios.library   = 'icucore'
 end
+

@@ -2,15 +2,8 @@
 
 ## v4.19.1 (Apr 05, 2024)
 
-- Updated iOS deployment target to 12.0
-- Updated Xcode version to 15.0 for building SendbirdChatSDK framework
-- Added `PrivacyInfo.xcprivacy` for [Apple Privacy Manifest](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files)
-
-## v4.19.0 (Apr 04, 2024)
-
-- Updated iOS deployment target to 12.0
-- Updated Xcode version to 15.0 for building SendbirdChatSDK framework
-- Added `PrivacyInfo.xcprivacy` for [Apple Privacy Manifest](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files)
+- Improved stability.
+- Fixed feedback status changing when feedback payload is encoded.
 
 ## v4.19.0 (Apr 04, 2024)
 

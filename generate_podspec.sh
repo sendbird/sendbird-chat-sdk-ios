@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
     'Young Hwang' => 'young.hwang@sendbird.com',
     'Kai Lee' => 'kai.lee@sendbird.com'
   }
-  s.source       = { :http => \"https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/v$VERSION/SendbirdChatSDK.zip\", :sha1 => \"$SHA1\" }
+  s.source       = { :http => \"https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/$VERSION/SendbirdChatSDK.zip\", :sha1 => \"$SHA1\" }
   s.requires_arc = true
   s.platform = :ios, '12.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'

@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.19.2 (Apr 12, 2024)
+
+## Improvements
+- Fixed feedback status changing when feedback payload is encoded
+- Removed `v` from Sendbird ChatSDK tags
+- SwiftLint integration and warning fixes
+- Improved stability 
+
 ## v4.19.1 (Apr 05, 2024)
 
 - Improved stability.

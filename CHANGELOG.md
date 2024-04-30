@@ -988,7 +988,3 @@ Note: However, subclassing is not recommended, and please be aware that any issu
 ## v4 Beta Changelog
 
 - Please refer to the [Changelog for v4 beta](https://github.com/sendbird/sendbird-chat-sdk-ios/blob/master/CHANGELOG_V4_BETA.md)
-
-## v3 Changelog
-
-- Please refer to the [Changelog for v3](https://github.com/sendbird/sendbird-ios-framework/blob/master/CHANGELOG.md)

@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.19.3 (May 02, 2024)
+
+## Improvements
+- Improved huge gap checking and message fill logic
+- Fixed a bug where the API host setting is not applied to `authenticateFeed()`
+
 ## 4.19.2 (Apr 12, 2024)
 
 ## Improvements

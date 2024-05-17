@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.19.4 (May 17, 2024)
+
+## Improvements
+- Fixed `reportUsers` request failure issue
+- Fixed an issue with submitform request not working correctly
+- Reduced the network traffic for the stats
+- Improved stability
+
 ## 4.19.3 (May 02, 2024)
 
 ## Improvements

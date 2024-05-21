@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.19.5 (May 21, 2024)
+
+## Improvements
+- Fixed `reportUsers` request failure issue
+- Fixed integer overflow when trying to access `Reaction.hash`
+- Improved stability
+
 ## 4.19.4 (May 17, 2024)
 
 ## Improvements

@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.19.6 (May 30, 2024)
+
+## Improvements
+- Fixed an arithmetic overflow issue when entering a GroupChannel.  
+
 ## 4.19.5 (May 21, 2024)
 
 ## Improvements

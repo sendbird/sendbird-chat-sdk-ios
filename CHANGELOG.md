@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.19.7 (Jun 13, 2024)
+
+## Improvements
+- Add macOS support.
+- Add static library SDK.
+- Fixed `Reaction` `hash` and `isEqual` to reflect same properties.
+
 ## 4.19.6 (May 30, 2024)
 
 ## Improvements

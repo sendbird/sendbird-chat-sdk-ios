@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.19.8 (Jul 09, 2024)
+
+## Improvements
+- Deprecated `SendbirdChat.authenticateFeed`; Please use `SendbirdChat.authenticate` instead. 
+- Added `SendbirdChat.getTotalUnreadNotificationsCount` to get the total unread notification count of the user.
+- Renamed `markAsViewed(messages:)` to `logViewed(messages:)`.
+- Added push notification handling methods to accept the API host as a parameter for sending delivered and clicked requests.
+    - `SendbirdChat.markPushNotificationAsDelivered(apiHost:remoteNotificationPayload:completionHandler:)`
+    - `SendbirdChat.markPushNotificationAsClicked(apiHost:remoteNotificationPayload:completionHandler:)`
+- Fixed an issue where `RequestHeadersContext` crashes due to `_swift_release_dealloc`. 
+
 ## 4.19.7 (Jun 13, 2024)
 
 ## Improvements

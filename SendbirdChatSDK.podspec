@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'SendbirdChatSDK'
-  s.version      = "4.19.7"
+  s.version      = "4.19.8"
   s.summary      = 'Sendbird Chat iOS Framework'
   s.description  = 'Messaging and Chat API for Mobile Apps and Websites'
   s.homepage     = 'https://sendbird.com'
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     'Young Hwang' => 'young.hwang@sendbird.com',
     'Kai Lee' => 'kai.lee@sendbird.com'
   }
-  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.19.7/SendbirdChatSDK.zip", :sha1 => "f8be5bb27ce277258f76d629156bc7b953737def" }
+  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.19.8/SendbirdChatSDK.zip", :sha1 => "e546814580611d3f169b71ce6704536d27715444" }
   s.requires_arc = true
   s.platform = :ios, '12.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'

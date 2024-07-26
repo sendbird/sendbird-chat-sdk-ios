@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.19.9 (Jul 26, 2024)
+
+## Improvements
+- Fixed an issue with apiResult of the handler of `MessageCollection` receiving messages from a point in time before `resetMyHistory()` call
+- Fixed to remove messages before resetMyHistory time from database when calling resetMyHistory
+- Fixed for freeze status not updating
+- Fixed timing for updating the count of participants
+
 ## 4.19.8 (Jul 09, 2024)
 
 ## Improvements

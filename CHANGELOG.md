@@ -1,5 +1,19 @@
 # Changelog
 
+## 4.20.0 (Aug 07, 2024)
+
+## New Interfaces
+- Support pinned message in `OpenChannel`
+    - Added `pinnedMessageIds` property in `BaseChannel`
+    - Added `lastPinnedMessage` property in `BaseChannel`
+    - Added `pinMessage` method in `BaseChannel`
+    - Added `unpinMessage` method in `BaseChannel`
+    - Added `channelDidUpdatePinnedMessages` in `OpenChannelDelegate`
+    - Improved `SendbirdChat.createPinnedMessageListQuery` to use in `OpenChannel`
+
+## Improvements
+- Added `hasBot` and `hasAIBot` properties in `GroupChannel`
+
 ## 4.19.9 (Jul 26, 2024)
 
 ## Improvements

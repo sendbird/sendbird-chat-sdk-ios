@@ -1,5 +1,41 @@
 # Changelog
 
+## 4.21.0 (Aug 29, 2024)
+
+
+## New Interfaces
+- Supports customTypes filtering on gets unreadItemCount
+  - Added `getUnreadItemCount(params:completionHandler:)` method in `SendbirdChat` class
+  - Added `GroupChannelUnreadItemCountParams` class
+  - Deprecated `getUnreadItemCount(key:completionHandler:)` method in `SendbirdChat` class
+- Added `EventDetail` in `ChannelContext` to hold detailed information of channel events
+  - i.e. Getting an inviter/invitees information when a channel has been added from receiving an invitation:
+       ```swift
+       func addedChannels( _ collection: GroupChannelCollection, context: ChannelContext, addedChannels: [GroupChannel]) {
+           if let detail = context.eventDetail as? EventDetail.UserReceivedInvitation {
+               let inviter = detail.inviter
+               let invitees = detail.invitees
+           }
+       }
+       ```
+- Added interfaces for `MessageForm` to work with Sendbird dashboard  
+(`Form` interfaces have been deprecated)
+  - Added `submitMessageForm(completionHandler:)` method in `BaseMessage` class
+  - Added `messageForm` property in `BaseMessage` class
+  - Added `MessageForm` class
+  - Added `MessageFormItem` class
+  - Added `MessageFormItem.Style` class
+  - Added `MessageFormItem.LayoutType` enum
+  - Added `MessageFormItem.ResultCount` enum
+  - Deprecated `submitForm(form:completionHandler)` method in `BaseMessage` class
+  - Deprecated `forms` property in `BaseMessage` class
+  - Deprecated `Form` class and interfaces
+  - Deprecated `FormField` class and interfaces
+  - Deprecated `FormFieldAnswer` class and interfaces
+
+## Improvements
+- Fix invalid query parameter value in `getTotalScheduledMessageCount` request
+
 ## 4.20.0 (Aug 07, 2024)
 
 ## New Interfaces

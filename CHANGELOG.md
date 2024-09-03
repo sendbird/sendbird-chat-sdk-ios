@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.21.1 (Sep 03, 2024)
+
+
+## Improvements
+- Fixed how "reset my channel history" is handled after it was triggered (both via SDK or Platform API)
+
 ## 4.21.0 (Aug 29, 2024)
 
 

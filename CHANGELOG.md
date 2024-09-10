@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.21.2 (Sep 10, 2024)
+
+
+## Improvements
+- Fixed internal `messageChangeLog` in `MessageCollection` not updating to correct next token.
+
 ## 4.21.0 (Aug 29, 2024)
 
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.21.3 (Sep 11, 2024)
+
+
+## Improvements
+- Fixed bug where `requestId` is not being set properly when sending a user message
+
 ## 4.21.2 (Sep 10, 2024)
 
 

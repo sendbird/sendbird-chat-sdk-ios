@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.21.4 (Sep 23, 2024)
+
+
+## Improvements
+- Added timeout in `GroupChannelCollection.loadMore()` to prevent long delay during fetching channels
+- Fixed a bug where non-operator's message affects the last message and the unread message count for exclusive channels
+- Modified `GroupChannel.markAsRead` behavior when called multiple times so that `GroupChannelDelegate.channelWasChanged(channel)` gets called when the unread count gets cleared
+
 ## 4.21.3 (Sep 11, 2024)
 
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.21.5 (Sep 23, 2024)
+
+
+## Improvements
+- Fixed a crash in range check logic
+
 ## 4.21.4 (Sep 23, 2024)
 
 

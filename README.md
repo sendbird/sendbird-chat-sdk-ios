@@ -6,10 +6,6 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Commercial License](https://img.shields.io/badge/License-Commercial-brightgreen.svg)](https://github.com/sendbird/sendbird-chat-sdk-ios/blob/master/LICENSE.md)
 
-> :warning: **DO NOT USE THESE VERSIONS**: `v4.3.1`, `v4.3.2`, `v4.4.0`, `v4.5.0`. There is a bug where the pending push token is removed after connecting a user.
-
-> :warning: **DO NOT USE THIS VERSION**: `v4.9.0`. There is a bug where FileMessage is not received.
-
 ## Table of contents
 
 1.  [Introduction](#introduction)
@@ -43,7 +39,9 @@ The minimum requirements for Chat SDK for iOS are:
 
 - `macOS`
 - `Xcode`
-- `At least one device running iOS 12.0 and later`
+- `At least one device running`
+  - `iOS 12.0 and later`
+  - `macOS 11.0 and later`
 - `Swift 5.0 or later` or `Objective-C`
 
 > **Note**: Sendbird server supports Transport Layer Security (TLS) from version 1.0 up to 1.3. For example, in the server regions where TLS 1.3 isn’t available, lower versions, sequentially from 1.2 to 1.0, will be supported for secure data transmission.
@@ -147,6 +145,18 @@ $ carthage update --use-xcframeworks
 4. Once the update is complete, go to your Xcode project's **General** settings tab. Then, open the **<YOUR_XCODE_PROJECT_DIRECTORY>/Carthage/Build/iOS** in the **Finder** window and drag and drop the **SendbirdChatSDK.xcframework** folder to the **Frameworks, Libraries, and Embedded** section in Xcode.
 
 <!-- ![Image|Adding SendbirdChatSDK.xcframework to your Xcode project](https://static.sendbird.com/docs/chat-ios-getting-started-xcode-general-tab.png) -->
+
+### Static Library
+
+You can also import the Chat SDK as a Static Library from SDK v4.19.7. 
+
+1. Navigate to the [Github Releases page](https://github.com/sendbird/sendbird-chat-sdk-ios/releases)
+
+2. Open `Assets` dropdown
+
+3. Download the `SendbirdChatSDKStatic.xcframework.zip` file
+
+4. Once the download is complete, go to your Xcode project's **General** settings tab. Then, drag and drop the **SendbirdChatSDKStatic.xcframework** to the **Frameworks, Libraries, and Embedded** section in Xcode.
 
 ### Step 3: Import the Chat SDK
 

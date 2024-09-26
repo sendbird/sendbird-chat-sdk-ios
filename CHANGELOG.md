@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.21.6 (Sep 26, 2024)
+
+
+## Improvements
+- Improved `SendbirdChat.initialize()` and `SendbirdChat.connect()` speed when `isLocalCachingEnabled` is true
+- Improved handling events related to reactions
+- Fixed a bug where a channel gets unexpectedly unhidden upon receiving a new message
+
 ## 4.21.5 (Sep 23, 2024)
 
 

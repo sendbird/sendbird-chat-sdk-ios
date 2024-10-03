@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.21.7 (Oct 03, 2024)
+
+
+## Improvements
+- Fixed occasional crash in `SessionWebSocketEngine.listen()` when reconnecting.
+
 ## 4.21.6 (Sep 26, 2024)
 
 

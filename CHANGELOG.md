@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.21.8 (Oct 08, 2024)
+
+
+## Improvements
+- Fixed a crash in `ChunkRange.contains(_:)` logic
+
 ## 4.21.7 (Oct 03, 2024)
 
 

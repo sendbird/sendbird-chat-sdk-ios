@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.21.9 (Oct 21, 2024)
+
+
+## Improvements
+- Improved logic to prevent crashes in `SessionWebSocketEngine`
+
 ## 4.21.8 (Oct 08, 2024)
 
 

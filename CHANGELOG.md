@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.21.10 (Oct 28, 2024)
+
+## Improvements 
+- Disabled read/unread member count for `AdminMessage`
+
 ## 4.21.9 (Oct 21, 2024)
 
 

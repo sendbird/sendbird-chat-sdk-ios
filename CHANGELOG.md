@@ -1,5 +1,30 @@
 # Changelog
 
+## 4.22.0 (Nov 07, 2024)
+
+### Features
+- Added new properties in `Reaction` to support more users
+    ```swift
+    class Reaction {
+        
+        /// A list of sampled userIds that have reacted to this Reaction.
+        public var sampledUserIds: [String]
+        
+        /// A count of the number of users who have reacted to this.
+        public var count: UInt
+        
+        /// A flag indicating whether the current user has reacted to this.
+        public var hasCurrentUserReacted: Bool
+    }
+    ```
+- Added a property and classes for representing template messages.
+    - Introduced `ContainerOptions` class
+    - Introduced `SimpleTemplateData` class
+    - Introduced `TemplateMessageData` class
+    - Added `templateMessageData` property of type `TemplateMessageData` to `BaseMessage` class
+- Added `BaseChannel.deleteMessage(messageId:hardDelete:completionHandler:)` to hard delete the message
+
+
 ## 4.21.10 (Oct 28, 2024)
 
 ## Improvements 

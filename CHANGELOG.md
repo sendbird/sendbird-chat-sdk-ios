@@ -7,9 +7,9 @@
 - Fixed bug where `GroupChannelCollection.loadMore` gives incorrect channels when created with `GroupChannelListQuery` with `latestLastMessage` order
 
 
-## 4.22.0 (Nov 07, 2024)
-
-### Features
+## <strike>4.22.0 (Nov 07, 2024)</strike> *DEPRECATED*
+**Deprecated as this version causes wrong ordering of channels from `GroupChannelCollection.loadMore()` when the collection is created by `GroupChannelListQuery` with `.latestLastMessage` order.**
+#### Features
 - Added new properties in `Reaction` to support more users
     ```swift
     class Reaction {

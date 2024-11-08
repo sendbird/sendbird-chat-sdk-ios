@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.22.1 (Nov 08, 2024)
+
+### Improvements
+- Fixed bug where `Reaction.hasCurrentUserReacted` doesn’t give correct value in some cases
+- Fixed bug where `GroupChannelCollection.loadMore` gives incorrect channels when created with `GroupChannelListQuery` with `latestLastMessage` order
+
+
 ## 4.22.0 (Nov 07, 2024)
 
 ### Features

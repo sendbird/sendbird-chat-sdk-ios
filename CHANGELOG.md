@@ -1,5 +1,49 @@
 # Changelog
 
+## 4.23.0 (Nov 20, 2024)
+
+### **Features**
+SDK now supports `Custom Report Categories` configured through Sendbird Dashboard, which takes effect after restarting the app.
+Previous report categories will remain until app restart.
+
+- Added `SendbirdChat.getReportCategoryInfoList(completionHandler:)`
+- Added `ReportCategoryInfo`
+    - Added new `report()` methods with using `ReportCategoryInfo`
+
+        ```swift
+        class SendbirdChat {
+            // Fetch list of `ReportCategoryInfo`
+            public static func getReportCategoryInfoList(completionHandler: ReportCategoryInfoListHandler? = nil)
+        }
+
+        class BaseChannel {
+            public func report(
+                reportCategoryInfo: ReportCategoryInfo,
+                reportDescription: String?,
+                completionHandler: SBErrorHandler?
+            )
+            public func reportUser(
+                _ offendingUser: User,
+                reportCategoryInfo: ReportCategoryInfo,
+                reportDescription: String?,
+                completionHandler: SBErrorHandler?
+            )
+            public func reportMessage(
+                _ message: BaseMessage,
+                reportCategoryInfo: ReportCategoryInfo,
+                reportDescription: String?,
+                completionHandler: SBErrorHandler?
+            )
+        }
+        ```
+- Deprecated `ReportCategory`
+    - Deprecated `BaseChannel.report(category:reportDescription:completionHandler:)`
+    - Deprecated `BaseChannel.report(offendingUser:reportCategory:reportDescription:completionHandler)`
+    - Deprecated `BaseChannel.report(message:reportCategory:reportDescription:completionHandler)`
+
+### Improvement
+- Improved SDK's memory cache management.
+
 ## 4.22.1 (Nov 08, 2024)
 
 ### Improvements

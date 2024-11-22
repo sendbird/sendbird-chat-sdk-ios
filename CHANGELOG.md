@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.23.1 (Nov 22, 2024)
+
+### Improvement
+- Fixed an issue where the `GroupChannelListQuery` intermittently failed to pass results to the closure when calling `loadNextPage`.
+
 ## 4.23.0 (Nov 20, 2024)
 
 ### **Features**

@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.23.2 (Dec 05, 2024)
+
+### Improvement
+- MessageCollection channel related delegates are deprecated
+  - `messageCollection(_:context:updatedChannel:)` method is deprecated, use `messageCollection(_:channelContext:updatedChannel:)` instead
+  - `messageCollection(_:context:deletedChannel:)` method is deprecated, use `messageCollection(_:channelContext:deletedChannel:)` instead
+
 ## 4.23.1 (Nov 22, 2024)
 
 ### Improvement

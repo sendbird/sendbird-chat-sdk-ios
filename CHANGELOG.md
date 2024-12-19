@@ -1,5 +1,19 @@
 # Changelog
 
+## 4.24.0 (Dec 19, 2024)
+
+### Features
+#### Reaction
+  - Added `sampledUserInfoList` in `Reaction`
+  - Added `ReactedUserInfo` representing each reacted user
+
+#### Poll
+  - Added support for `poll` in `BaseMessage`
+  - Added `pollId` in `FileMessageCreateParams` and `MultipleFilesMessageCreateParams`
+
+### Improvement
+  - Improved logic to prevent crashes in `SessionWebSocketEngine`
+
 ## 4.23.2 (Dec 05, 2024)
 
 ### Improvement

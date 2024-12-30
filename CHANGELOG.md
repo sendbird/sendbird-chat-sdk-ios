@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.24.1 (Dec 30, 2024)
+
+### Improvement
+  - Fixes an issue where changes to a user’s information(nickname, profile imge) were not reflected in `SuperGroupChannel`.
 ## 4.24.0 (Dec 19, 2024)
 
 ### Features

@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.24.2 (Jan 16, 2025)
+
+## Improvements
+- Fixed Group Channel Change Logs to always show delivery receipts
+- Improved speed of `GroupChannelCollection.loadMore()` when the `GroupChannelListQuery` is set with filters
+
 ## 4.24.1 (Dec 30, 2024)
 
 ### Improvement

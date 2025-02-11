@@ -1,5 +1,24 @@
 # Changelog
 
+## 4.24.3 (Feb 11, 2025)
+
+## Improvements
+- Improved logic to prevent crashes in `SessionWebSocketEngine`
+- Added `AuthTokenType`
+- Added `authTokenType` parameter to `authenticate()` (Default Value: `.sessionToken`)
+    ```swift
+    // using AccessToken
+    SendbirdChat.authenticate(userId: USER_ID, authToken: ACCESS_TOKEN, authTokenType: .accessToken) { user, error in
+    }
+
+    // using SessionToken
+    SendbirdChat.authenticate(userId: USER_ID, authToken: SESSION_TOKEN) { user, error in
+    }
+    SendbirdChat.authenticate(userId: USER_ID, authToken: SESSION_TOKEN, authTokenType: .sessionToken) { user, error in
+    }
+    ```
+- Fixed a bug where `MessageCollectionDelegate` is not being called when a message is translated using `BaseChannel.translateUserMessage(_:targetLanguages:completionHandler:)`
+- Fixed empty channels to be fetched later than non-empty channels, when fetching channels in `.latestLastMessage` order from local database
 ## 4.24.2 (Jan 16, 2025)
 
 ## Improvements

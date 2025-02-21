@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   }
   s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.24.3/SendbirdChatSDK.zip", :sha1 => "5050cbf13f7e96234c625fd6ae4e3269336dece2" }
   s.requires_arc = true
-  s.platform = :ios, '12.0'
+  s.platform = :ios, '13.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'
   s.ios.vendored_frameworks = 'SendbirdChatSDK/SendbirdChatSDK.xcframework'
   s.ios.frameworks = ['UIKit', 'CFNetwork', 'Security', 'Foundation', 'MobileCoreServices', 'SystemConfiguration', 'CoreFoundation']

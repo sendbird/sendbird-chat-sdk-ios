@@ -1,5 +1,5 @@
 
-// swift-tools-version:5.10
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 let package = Package(
@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SendbirdChatSDK",
-            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.24.3/SendbirdChatSDK.xcframework.zip",
-            checksum: "da87f778b899f2c20c3ae20748ee7b2e4347495d5d0f242820daee567bc98226"
+            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.25.0/SendbirdChatSDK.xcframework.zip",
+            checksum: "337b88db7c5770f10a30529acb608887b1ecbd843aea222421bcdeb81c87236e"
         ),
     ]
 )

@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.25.1 (Mar 06, 2025)
+
+## Improvements
+- Fixed a bug where an `apiHost`'s trailing path gets cut off when set from `SendbirdChat.connect` and `SendbirdChat.authenticate`
+
 ## 4.25.0 (Feb 27, 2025)
 
 ## Improvements

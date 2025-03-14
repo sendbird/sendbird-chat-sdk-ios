@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.25.2 (Mar 14, 2025)
+
+## Improvements
+- Improved stability to resolve crashes when registering push device token or using device token cache.
+
 ## 4.25.1 (Mar 06, 2025)
 
 ## Improvements

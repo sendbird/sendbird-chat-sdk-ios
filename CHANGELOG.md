@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.25.2-beta (Mar 19, 2025)
+
+## Beta Release
+- Added new features to AIAgent
+
 ## 4.25.2 (Mar 14, 2025)
 
 ## Improvements

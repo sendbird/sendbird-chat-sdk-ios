@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.25.3 (Apr 08, 2025)
+
+## Improvements
+- Fixed a crash that could occur from updating `AtomicProperty` values
+
 ## 4.25.2 (Mar 14, 2025)
 
 ## Improvements

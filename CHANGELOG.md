@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.25.4 (Apr 10, 2025)
+
+## Improvements
+- Fixed a bug where calling `markAsRead()` multiple times in quick succession caused an `Exceeded acknowledgement timeout` error.
+- Fixed a bug where the latest messages were not loaded when the app entered the foreground, if messages were filtered by `MessageListParams` in `MessageCollection`.
+
 ## 4.25.3 (Apr 08, 2025)
 
 ## Improvements

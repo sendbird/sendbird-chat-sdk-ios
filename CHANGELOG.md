@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.100 (Apr 14, 2025)
+
+testing 1.0.100 for github actions
+
 ## 4.25.4 (Apr 10, 2025)
 
 ## Improvements

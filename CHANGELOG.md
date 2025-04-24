@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.25.5 (Apr 24, 2025)
+
+## Improvements
+- Fixed issue where WS command is not sent after API host changes
 ## 4.25.4 (Apr 10, 2025)
 
 ## Improvements

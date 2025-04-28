@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.25.6 (Apr 28, 2025)
+
+## Improvements
+- Fixed bug where `MessageCollection.succeededMessages` included failed messages from `MessageCollection.startCollection()`
+
+
 ## 4.25.5 (Apr 24, 2025)
 
 ## Improvements

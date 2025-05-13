@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.25.7 (May 13, 2025)
+
+## Improvements
+- Fixed a bug where sending a message with `UserMessageCreateParams.translationTargetLanguages` failed when using the API
+- Fixed an occasional crash in `SBTimer.expire()`
+
 ## 4.25.6 (Apr 28, 2025)
 
 ## Improvements

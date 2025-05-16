@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.25.8 (May 16, 2025)
+
+## Improvements
+- Fixed a crash that could occur when updating an Atomic property in certain cases (e.g., when calling  `SendbirdChat.setAppVersion()`)
+
 ## 4.25.7 (May 13, 2025)
 
 ## Improvements

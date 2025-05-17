@@ -1,5 +1,72 @@
 # Changelog
 
+## 4.26.0 (May 17, 2025)
+
+## New Feature: AI Agent Now Available in Sendbird Chat SDK  
+Let your chats talk smarter.
+
+We’re thrilled to introduce a **brand-new AI Agent feature** in the Sendbird Chat SDK!  
+Now, without requiring a separate integration, you can power your existing chat experience with intelligent AI-driven interactions, message templates, satisfaction surveys, and seamless agent handoff — **natively inside the Chat SDK.**
+
+---
+
+### What’s New?
+
+#### 🤖 AI Agent Core Classes
+Brand-new APIs and models to manage and interact with AI agents:
+- `AIAgent` – The main entry point for all AI Agent operations.
+- `AIAgent.Info` – Metadata and info about the agent.
+- `AIAgent.MessengerSettingsParams` – Messenger UI and behavior configuration.
+- `RawResponse` – Raw JSON wrapper for extensibility.
+
+#### 🧠 AI Message Templates
+Build smart, reusable message flows:
+- **New classes**:  
+  - `AIAgent.MessageTemplateListParams`  
+  - `AIAgent.MessageTemplateResult`
+- **New function**:  
+  - `SendbirdChat.getAIAgentMessageTemplateList(...)`
+
+#### 🛠️ AI Messenger Settings
+Let the SDK fetch and apply dynamic widget/messenger configurations:
+- `SendbirdChat.requestAIAgentMessengerSettings(...)`
+
+#### 💬 Conversation Management
+Manage and monitor AI-related conversation states and metadata:
+- **New models**:  
+  - `Conversation`, `ConversationChannelInfo`  
+  - `ConversationHandoff`, `ConversationResolution`
+- **Query API**:  
+  - `SendbirdChat.createConversationListQuery(...)`
+- **Enums**:  
+  - `ConversationStatus` (.open / .closed)  
+  - `ConversationListOrder` (.updatedAt / .createdAt)
+
+#### 📊 Built-in CSAT (Customer Satisfaction) Surveys
+Collect feedback natively from conversations:
+- `GroupChannel.submitCSAT(...)`
+- `GroupChannel.markConversationAsHandoff(...)`
+- With resolution status enums: `.positive`, `.negative`, `.unresponsive`
+
+#### 📂 File Message Enhancements
+- `FileMessageCreateParams.message` now supports text alongside files.
+
+---
+
+### 🧪 Additional Enhancements
+- `AppInfo` now includes `aiAgentInfo` for direct metadata access.
+- Template variable parsing improved: primitive types are now auto-converted to `String`.
+
+---
+
+With this release, **AI-powered messaging is now a built-in capability** of the Sendbird Chat SDK.  
+No need for a separate SDK or custom logic — just update, configure, and launch.
+
+---
+
+📘 [Explore the AIAgent Documentation](https://github.com/sendbird/sendbird-ai-agent/tree/main/ios)  
+💬 Ready to build smarter chat? This update is your first step.
+
 ## 4.25.8 (May 16, 2025)
 
 ## Improvements

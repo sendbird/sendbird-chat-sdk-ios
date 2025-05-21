@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.26.1 (May 21, 2025)
+
+## Improvements
+- Fixed an issue where the `apiResultHandler` was invoked 20 seconds after calling `MessageCollection.startCollection()`
+- Fixed a bug where the `isPinnedMessage` property in `UserMessageCreateParams` was not applied when sending a `UserMessage`
 ## 4.26.0 (May 17, 2025)
 
 ## New Feature: AI Agent Now Available in Sendbird Chat SDK  

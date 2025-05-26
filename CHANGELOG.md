@@ -1,5 +1,44 @@
 # Changelog
 
+## 4.27.0 (May 26, 2025)
+
+### New Feature
+- Added `markAsUnread(message: BaseMessage, completionHandler: SBErrorHandler?)` to `GroupChannel`. This new feature changes the read status of messages in the channel to `unread`, starting from the specified message.
+```swift
+groupChannel.markAsUnread(message) { error in 
+  // Handle error if any.
+}
+
+// Listen to updates in the current user's `myLastRead` of the channel in the below `GroupChannelDelegate`.
+// Also use this delegate method to listen to updates in the read status by other channel members.
+func channelDidUpdateReadStatus(_ channel: BaseChannel, userIds: [String]) {
+    // ...
+}
+
+// Listen to updates in the current user's unread message count in the below `UserEventDelegate`.
+func didUpdateTotalUnreadMessageCount(unreadMessageCount:) {
+    let totalUnreadCount = unreadMessageCount.groupChannelCount 
+}
+```
+
+### New Interfaces 
+- A new delegate method is added in `GroupChannelDelegate`.
+  - This delegate method is called when the `readReceipts` of group channel is updated or when the current user's `myLastRead` of group channel is updated.  
+```swift 
+optional func channelDidUpdateReadStatus(_ channel: GroupChannel, userIds: [String])
+```
+- The below `GroupChannelDelegate` is deprecated. 
+```swift
+optional func channelDidUpdateReadStatus(_ channel: GroupChannel)
+```
+
+- Added `apiHost` and `wsHost` parameters to the InitParams initialization method
+  - This allows custom API and WebSocket hosts to be set during initialization.
+
+
+### Improvements
+- Added `isAIAgent` and `isDesk` flags to `GroupChannel` class to indicate whether a channel is an AI Agent or Desk channel.
+
 ## 4.26.1 (May 21, 2025)
 
 ## Improvements

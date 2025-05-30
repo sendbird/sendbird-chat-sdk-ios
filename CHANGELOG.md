@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.27.1 (May 30, 2025)
+
+### Improvements
+
+- Improved internal channel sync logic
+
 ## 4.27.0 (May 26, 2025)
 
 ### New Feature

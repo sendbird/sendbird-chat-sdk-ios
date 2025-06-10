@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.27.2 (Jun 10, 2025)
+
+### Improvements
+
+- Improved performance of real-time event handling to prevent possible delays
+
 ## 4.27.1 (May 30, 2025)
 
 ### Improvements

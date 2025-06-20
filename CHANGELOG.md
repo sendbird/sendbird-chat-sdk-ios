@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.27.3 (Jun 20, 2025)
+
+### Improvements
+
+- Fixed exposed database error message when running after initial installation
+- Resolved an issue where some channels were missing when loading the channel list using GroupChannelCollection
+- Fixed a crash that could occur during repeated WebSocket reconnection attempts
+
 ## 4.27.2 (Jun 10, 2025)
 
 ### Improvements

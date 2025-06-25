@@ -1,5 +1,20 @@
 # Changelog
 
+## 4.28.0 (Jun 25, 2025)
+
+### New Interfaces
+
+- The below delegate methods have been added to `GroupChannelDelegate`
+
+  - `func channelDidMarkAsRead(_ channel: GroupChannel, userIds: [String])`: called when a member in a Group Channel marks the channel as read
+  - `func channelDidMarkAsUnread(_ channel: GroupChannel, userIds: [String])`: called when a member in a Group Channel marks a message as unread
+
+- Accordingly, the below `GroupChannelDelegate` method has been deprecated. The above new delegate methods replace the below method
+
+  - `func channelDidUpdateReadStatus(_ channel: GroupChannel, userIds: [String])`
+
+- Added `knownActiveChannelURL` in `MessengerSettingsParams` for AIAgent channel reuse
+
 ## 4.27.3 (Jun 20, 2025)
 
 ### Improvements

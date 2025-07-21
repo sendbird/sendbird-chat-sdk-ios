@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.28.1 (Jul 21, 2025)
+
+### Improvements
+
+- Fixed a potential deadlock issue that could occur during stat log processing
+- Improved stability of API request handling
+
+
 ## 4.28.0 (Jun 25, 2025)
 
 ### New Interfaces

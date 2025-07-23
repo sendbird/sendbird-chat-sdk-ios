@@ -1,5 +1,25 @@
 # Changelog
 
+## 4.29.0 (Jul 23, 2025)
+
+### New Features
+- **Context Object Management API**: Added new public methods for managing AI Agent context objects
+  - `GroupChannel.getContextObject(aiAgentId:completionHandler:)` - Retrieve context object for an AI agent
+  - `GroupChannel.updateContext(_:aiAgentId:completionHandler:)` - Replace entire context data (PUT operation)  
+  - `GroupChannel.patchContext(_:aiAgentId:completionHandler:)` - Merge context data with existing data (PATCH operation)
+
+- **AIAgent**: Added a new class for AI Agent channel list management
+  - Added `AIAgent.getGroupChannelCount(params:completionHandler:)` for getting AI Agent channel count
+  - Added `AIAgent.getMyGroupChannelChangeLogs(token:params:completionHandler:)` for AI Agent channel change logs
+  - Added `AIAgent.getMyGroupChannelChangeLogs(timestamp:params:completionHandler:)` for AI Agent channel change logs by timestamp
+  - Added `AIAgent.getUnreadItemCount(params:completionHandler:)` for AI Agent channel unread count
+  - Added `isAIAgent` property to `GroupChannel`
+  - Added `isDesk` property to `GroupChannel`
+  - Added `aiAgentChannelFilter` and `deskChannelFilter` to `GroupChannelListQueryParams`
+  - Added `AIAgentGroupChannelListQueryParams` for AI Agent channel list queries
+  - Added `AIAgentMyGroupChannelChangeLogsParams` for AI Agent channel change logs
+  - Added `AIAgentUnreadItemCountParams` for AI Agent unread count queries
+
 ## 4.28.1 (Jul 21, 2025)
 
 ### Improvements

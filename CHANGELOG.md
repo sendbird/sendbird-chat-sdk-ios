@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.29.1 (Aug 01, 2025)
+
+### Improvements
+- Improved stability in real-time event handling
+
 ## 4.29.0 (Jul 23, 2025)
 
 ### New Features

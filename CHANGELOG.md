@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.29.2 (Aug 04, 2025)
+
+## Improvements
+- Fixed `completionHandler` not being called in `loadNextPage(completionHandler:)` in `PreviousMessageListQuery` when the query is declared as a local variable
+- Fixed an issue where incorrect stat log were generated during WebSocket reconnection attempts
 ## 4.29.1 (Aug 01, 2025)
 
 ### Improvements

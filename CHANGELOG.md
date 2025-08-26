@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.100 (Aug 26, 2025)
+
+## Improvements
+testing release automation
 ## 4.29.2 (Aug 04, 2025)
 
 ## Improvements

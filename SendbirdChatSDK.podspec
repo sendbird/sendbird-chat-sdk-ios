@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'SendbirdChatSDK'
-  s.version      = "4.29.3"
+  s.version      = "0.0.100"
   s.summary      = 'Sendbird Chat iOS Framework'
   s.description  = 'Messaging and Chat API for Mobile Apps and Websites'
   s.homepage     = 'https://sendbird.com'
@@ -15,12 +15,13 @@ Pod::Spec.new do |s|
     'Young Hwang' => 'young.hwang@sendbird.com',
     'Kai Lee' => 'kai.lee@sendbird.com'
   }
-  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.29.3/SendbirdChatSDK.zip", :sha1 => "f01c5e753aa3312847d4ee1ca808819264692b34" }
+  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/0.0.100/SendbirdChatSDK.zip", :sha1 => "feb90a89acf856f6ebd85563942292a7e4d9d1e3" }
   s.requires_arc = true
   s.platform = :ios, '13.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'
   s.ios.vendored_frameworks = 'SendbirdChatSDK/SendbirdChatSDK.xcframework'
-  s.ios.frameworks = ['UIKit', 'CFNetwork', 'Security', 'Foundation', 'MobileCoreServices', 'SystemConfiguration', 'CoreFoundation']
+  s.ios.frameworks = ['UIKit', 'CFNetwork', 'Security', 'Foundation', 'Network', 'MobileCoreServices', 'SystemConfiguration', 'CoreFoundation']
   s.ios.library   = 'icucore'
+  s.dependency 'SendbirdAuth', '~> ' + s.version.to_s
 end
 

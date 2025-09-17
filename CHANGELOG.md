@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.101 (Sep 17, 2025)
+
+## Improvements
+- Resolved a bug in the API call logic that could lead to a crash in certain edge cases
+
 ## 4.29.3 (Sep 02, 2025)
 
 ## Improvements

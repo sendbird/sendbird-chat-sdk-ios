@@ -1,5 +1,17 @@
 # Changelog
 
+## 4.30.0 (Sep 24, 2025)
+
+## Features
+- Added the `helpdeskInfo` property to `GroupChannel`, representing customer support information for agent channel lists.
+- Added the `handedOverAt` property to `Conversation`, indicating when the handoff to an agent occurred.
+
+## Bug Fixes
+- Fixed a bug where the participant count in an open channel could be displayed incorrectly.
+- Fixed a memory leak issue related to Database resource management
+- Fixed URLSession invalidation crash in APIClient.clear() method
+- Fixed a bug where a specific value was missing during message serialization/deserialization.
+
 ## 4.29.3 (Sep 02, 2025)
 
 ## Improvements

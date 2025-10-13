@@ -1,2 +1,3 @@
-@_exported import SendbirdChatSDK
-@_exported import SendbirdAuth
+import SendbirdChatSDK
+
+public class SendbirdChatWrapper {}

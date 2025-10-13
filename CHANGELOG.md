@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.31.0 (Oct 13, 2025)
+
+## Features
+- Network and authentication features have been separated into the `SendbirdAuth` library.
 ## 4.30.0 (Sep 24, 2025)
 
 ## Features

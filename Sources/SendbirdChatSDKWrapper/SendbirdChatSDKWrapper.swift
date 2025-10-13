@@ -1,2 +1,2 @@
 @_exported import SendbirdChatSDK
-@_exported import SendbirdAuthInternal
+@_exported import SendbirdAuth

@@ -1,5 +1,20 @@
 # Changelog
 
+## 4.31.1 (Oct 24, 2025)
+
+* Improved stability of Auth module
+* Improved message chunk local caching logic
+* Added configurable timeout for invalidating typing indicator in group channels.
+  * **Public Interface Changes:**
+    * Added `SendbirdChatOptions.getTypingIndicatorInvalidateTimeout()` to get the current timeout value.
+    * Added `SendbirdChatOptions.setTypingIndicatorInvalidateTimeout(_:)` to set the timeout value.
+
+#### Note
+
+* Removed v4.31.0 from distribution due to critical issues
+* If you're experiencing runtime crashes in v4.31.0, please update to v4.31.1.
+* If encode/decode methods of certain SendbirdChat classes or structs (e.g., `make` functions) are not working properly in v4.31.0, please update to v4.31.1.
+
 ## 4.31.0 (Oct 13, 2025)
 
 ## Features

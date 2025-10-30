@@ -16,13 +16,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SendbirdChatSDK",
-            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.31.1/SendbirdChatSDK.xcframework.zip",
-            checksum: "0a16c6b4dd7a18defe31ea73e7660a1033c86fe721e1eb63fcf2d0ed866fe23b"
+            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.32.0/SendbirdChatSDK.xcframework.zip",
+            checksum: "973c7171374cd0a38044b89a7fa3f447bdac2d4c42711313e1db4f3295c1e32f"
         ),
         .binaryTarget(
             name: "SendbirdAuthInternal",
-            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.31.1/SendbirdAuth.xcframework.zip",
-            checksum: "10feedf69b42a0f0bea497df88468c76f7d011cea20d0c2e7b2e0bebf9c448a5"
+            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.32.0/SendbirdAuth.xcframework.zip",
+            checksum: "58660310286ba5e1ad472dd18d30997ff53f2ccbb374566cd68d8b30b6f332a6"
         ),
         .target(
             name: "SendbirdChatSDKWrapper",

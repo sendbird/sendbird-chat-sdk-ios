@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.32.0 (Oct 30, 2025)
+
+## Features
+
+* Added `closeConversation(completionHandler:)` publicly available for closing AI Agent conversations
 ## 4.31.1 (Oct 24, 2025)
 
 * Improved stability of Auth module

@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.99.99 (Nov 06, 2025)
+
+## Features
+
+- **AIAgent Message Feedback API**
+  - Added `AIAgent.createMessagesFeedback()` method to create feedback for AI agent messages
+  - Added `AIAgent.updateMessagesFeedback()` method to update existing feedback
+  - Added `AIAgent.deleteMessagesFeedback()` method to delete feedback
+  - Introduced `AIAgent.MessagesFeedbackRating` enum with `.good` and `.bad` rating options
+  - Added parameter classes for feedback operations:
+    - `AIAgent.BaseMessagesFeedbackParams` - Base parameters with channel URL and message ID
+    - `AIAgent.CreateMessagesFeedbackParams` - Parameters for creating feedback with rating and optional comment
+    - `AIAgent.UpdateMessagesFeedbackParams` - Parameters for updating feedback
+    - `AIAgent.DeleteMessagesFeedbackParams` - Parameters for deleting feedback
+
 ## 4.33.0 (Nov 05, 2025)
 
 ## Features

@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.34.1 (Nov 19, 2025)
+
+## Bugfix
+
+- Fixed NSMapTable race condition and double-free crashes in EventBroadcaster
+- Fixed symbol recognition issues caused by conflicting names between the framework and internal classes.
 ## 4.34.0 (Nov 13, 2025)
 
 ## Features

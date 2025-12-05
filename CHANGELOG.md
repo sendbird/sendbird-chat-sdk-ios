@@ -1,5 +1,37 @@
 # Changelog
 
+## 0.99.999 (Dec 05, 2025)
+
+## Features
+
+- Added `didDelayConnection(retryAfter:)` delegate method to `ConnectionDelegate`.
+  - A new callback method that is invoked when the server is overloaded. This callback provides information about the delay time before automatic reconnection. After the delayed time period, the SDK automatically initiates reconnection and triggers the callback sequence: `didStartReconnection()` → `didSucceedReconnection()`
+- You can also handle the error after attempting to connect to Sendbird server via the completionHandler of `SendbirdChat.connect(userId: completionHandler:)`.
+
+  ```
+  SendbirdChat.connect(userId: {USER_ID}) { user, error in
+      if let error {
+          if error.errorCode == .serverOverloaded {
+              let retryAfter = error.userInfo["retry_after"] as? UInt
+              let reasonCode = error.userInfo["reason_code"] as? Int
+              let errorMessage = error.userInfo["message"] as? String
+
+              // The SDK will automatically retry after the specified delay time
+              // and the result will be notified through `ConnectionDelegate.didSucceedReconnection()`.
+
+              // Any custom handling
+
+              return
+          }
+      }
+  }
+  ```
+
+## Improvements
+
+- Fix an issue that the UI could freeze when attempting to reconnect after going offline.
+- Fix an issue that resending message could fail when attempting to reconnect after going offline.
+
 ## 4.34.1 (Nov 19, 2025)
 
 ## Bugfix

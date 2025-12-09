@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'SendbirdChatSDK'
-  s.version      = "4.34.1"
+  s.version      = "0.99.999"
   s.summary      = 'Sendbird Chat iOS Framework'
   s.description  = 'Messaging and Chat API for Mobile Apps and Websites'
   s.homepage     = 'https://sendbird.com'
@@ -15,15 +15,12 @@ Pod::Spec.new do |s|
     'Young Hwang' => 'young.hwang@sendbird.com',
     'Kai Lee' => 'kai.lee@sendbird.com'
   }
-  # Single distribution zip now contains both Chat & Auth xcframeworks inside SendbirdChatSDK/ folder
-  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.34.1/SendbirdChatSDK.zip", :sha1 => "12bd431d29e35900cb0ba330aa4681b0d08820b3" }
+  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/0.99.999/SendbirdChatSDK.zip", :sha1 => "5fc9aacd0a17d5a15b2b8009887b9d319f12c733" }
   s.requires_arc = true
   s.platform = :ios, '13.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'
-  s.ios.vendored_frameworks = [
-    'SendbirdChatSDK/SendbirdChatSDK.xcframework',
-    'SendbirdChatSDK/SendbirdAuthSDK.xcframework'
-  ]
+  s.ios.vendored_frameworks = 'SendbirdChatSDK/SendbirdChatSDK.xcframework'
+  s.dependency 'SendbirdAuthSDK', '0.0.4'
   s.pod_target_xcconfig = {
     'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO'
   }

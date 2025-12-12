@@ -1,5 +1,15 @@
 # Changelog
 
+## 4.34.2 (Dec 12, 2025)
+
+## Bugfix
+
+- Fixed a crash caused by double-resume of continuation in `StatAPIClient`
+
+## Interface Changes
+
+- Deprecated `BaseMessage` function `isResendable()`
+  - Renamed to `isResendable(in:)`
 ## 4.34.1 (Nov 19, 2025)
 
 ## Bugfix

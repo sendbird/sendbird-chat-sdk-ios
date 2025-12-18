@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.35.0 (Dec 18, 2025)
+
+## Changed
+
+- Refactor internal authentication layer into a standalone Swift Package (SendbirdAuthSDK)
+
+
 ## 4.34.2 (Dec 12, 2025)
 
 ## Bugfix

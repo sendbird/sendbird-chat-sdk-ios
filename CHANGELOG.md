@@ -1,5 +1,30 @@
 # Changelog
 
+## 4.36.0 (Jan 29, 2026)
+
+## Fixed
+
+- Poll voterCount is now updated in real-time when vote events are received
+- Fixed an issue where `GroupChannel.memberCount`, `GroupChannel.`joinedMemberCount, and `OpenChannel.participantCount` were not updated correctly when receiving member count update events from the server
+
+### Deprecations
+
+- **Chatbot Feedback APIs**
+  - Deprecated `FeedbackHandler` typealias
+  - Deprecated `Feedback` model class and related properties
+  - Deprecated `BaseMessage.myFeedback` and `BaseMessage.myFeedbackStatus` properties
+  - Deprecated feedback methods: `submitFeedback()`, `updateFeedback()`, `deleteFeedback()`
+  - All deprecated feedback methods now return `ChatError.notSupported` error
+
+- **Message Form APIs**
+  - Deprecated `MessageForm` and `MessageFormItem` classes
+  - Deprecated `BaseMessage.messageForm` property
+  - Deprecated `submitMessageForm()` method now returns `ChatError.notSupported` error
+
+- **Event Handling**
+  - Deprecated `EventDetail.UpdateFeedbackMessage` event class
+  - Deprecated `CollectionEventSource.eventFeedbackMessageUpdated` enum case
+
 ## 4.35.0 (Dec 18, 2025)
 
 ## Changed

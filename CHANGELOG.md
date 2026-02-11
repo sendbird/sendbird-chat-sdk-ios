@@ -1,5 +1,17 @@
 # Changelog
 
+## 4.37.0 (Feb 11, 2026)
+
+### New Features
+- **AI Agent Conversation Initialization API**
+  - Added `initConversation(params:completionHandler:)` method to `GroupChannel` for initializing conversations with AI agents
+  - Added `InitConversationParams` class to specify initialization parameters (AI agent ID)
+  - Added `setShouldSendFirstMessage(_:)` method to `MessengerSettingsParams` to control automatic welcome message behavior
+
+### Improvements
+- Added `context` property to `Conversation` class to expose AI Agent context data as a raw JSON string
+- Updated default `aiAgentConversationStatusFilter` to include both `.open` and `.closed` states in `AIAgent.GroupChannelListQueryParams` and `AIAgent.GroupChannelUnreadMessageCountParams`
+
 ## 4.36.0 (Jan 29, 2026)
 
 ## Fixed

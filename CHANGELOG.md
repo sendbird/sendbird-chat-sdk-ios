@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.37.1 (Feb 20, 2026)
+
+### New Features
+- Add `message` property to `MultipleFilesMessageCreateParams`
+  - Allows including a text message when sending multiple files in a single message
+
 ## 4.37.0 (Feb 11, 2026)
 
 ### New Features

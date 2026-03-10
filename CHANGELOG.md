@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.37.2 (Mar 10, 2026)
+
+### New Features
+- AI Agent Context Management API
+  - Added `AIAgent.updateContext(channelURL:context:completionHandler:)` to fully replace AI Agent context for a channel (PUT)
+  - Added `AIAgent.patchContext(channelURL:context:completionHandler:)` to partially update AI Agent context for a channel (PATCH)
+
 ## 4.37.1 (Feb 20, 2026)
 
 ### New Features

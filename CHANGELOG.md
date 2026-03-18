@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.38.0 (Mar 18, 2026)
+
+## Improvement
+
+- Improved stability
+
 ## 4.37.2 (Mar 10, 2026)
 
 ### New Features

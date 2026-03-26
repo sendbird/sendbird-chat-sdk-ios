@@ -13,13 +13,13 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/sendbird/sendbird-auth-ios.git", .exact("1.0.0"))
+        .package(url: "https://github.com/sendbird/sendbird-auth-ios.git", .exact("1.0.1"))
     ],
     targets: [
         .binaryTarget(
             name: "SendbirdChatSDK",
-            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.38.0/SendbirdChatSDK.xcframework.zip",
-            checksum: "8328fb43452ba5a0d9128c76fd8f1c0de1c3414e5d7f0a12cb95722f54539ced"
+            url: "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.38.1/SendbirdChatSDK.xcframework.zip",
+            checksum: "7de3ef6bd9dc55c6e34a64502dd1644ad83879f73ff54fffda3e8d6926a9c150"
         ),
         .target(
             name: "SendbirdChatSDKWrapper",

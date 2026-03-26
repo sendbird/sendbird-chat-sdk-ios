@@ -1,5 +1,44 @@
 # Changelog
 
+## 4.38.1 (Mar 26, 2026)
+
+## New Interfaces
+
+- Added `Member.joinedAt` property that provides the timestamp of when the member joined the channel, in seconds
+- Added `ConversationHandoff.requestedAt` property that provides the timestamp of when the handoff was requested
+
+## New Feature
+
+### Weekly Do Not Disturb (Weekly DND)
+
+- Users can now set weekly do not disturb schedules.
+- Users can set different DND time windows for each day of the week, that is to be repeated weekly.
+- This new feature replaces the legacy daily DND interfaces, which are now deprecated (see deprecated interfaces below).
+  - `setWeeklyDoNotDisturb(schedules:timezone:completionHandler:)` — set per-day DND schedules with multiple time windows per day
+  - `getWeeklyDoNotDisturb(completionHandler:)` — retrieve the current weekly DND schedules
+  - `clearWeeklyDoNotDisturb(completionHandler:)` — clear all weekly DND schedules
+  - `DndSchedule` as a typealias for `[DayOfWeek: [DndTimeWindow]]`
+
+```swift
+// USAGE EXAMPLE:
+
+// Using a factory method
+let schedule: DndSchedule = .weekdays([
+    DndTimeWindow(startHour: 22, startMinute: 0, endHour: 23, endMinute: 59)
+])
+
+// Using a dictionary literal
+let schedule: DndSchedule = [
+    .monday: [DndTimeWindow(startHour: 9, startMinute: 0, endHour: 17, endMinute: 0)],
+    .saturday: [DndTimeWindow(startHour: 0, startMinute: 0, endHour: 12, endMinute: 0)]
+]
+
+// Pass to setWeeklyDoNotDisturb
+SendbirdChat.setWeeklyDoNotDisturb(schedules: schedule, timezone: .current) { error in
+    // Handle error
+}
+```
+
 ## 4.38.0 (Mar 18, 2026)
 
 ## Improvement

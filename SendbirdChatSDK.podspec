@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = 'SendbirdChatSDK'
-  s.version      = "4.38.1"
+  s.version      = "4.38.2"
   s.summary      = 'Sendbird Chat iOS Framework'
   s.description  = 'Messaging and Chat API for Mobile Apps and Websites'
   s.homepage     = 'https://sendbird.com'
@@ -15,12 +15,12 @@ Pod::Spec.new do |s|
     'Young Hwang' => 'young.hwang@sendbird.com',
     'Kai Lee' => 'kai.lee@sendbird.com'
   }
-  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.38.1/SendbirdChatSDK.zip", :sha1 => "b0a653e670b1e3c41cc37b191dcc61fefd311193" }
+  s.source       = { :http => "https://github.com/sendbird/sendbird-chat-sdk-ios/releases/download/4.38.2/SendbirdChatSDK.zip", :sha1 => "310961fb6c72298236a8466574f9505ca3ef89e1" }
   s.requires_arc = true
   s.platform = :ios, '13.0'
   s.documentation_url = 'https://sendbird.com/docs/chat'
   s.ios.vendored_frameworks = 'SendbirdChatSDK/SendbirdChatSDK.xcframework'
-  s.dependency 'SendbirdAuthSDK', '1.0.1'
+  s.dependency 'SendbirdAuthSDK', '1.0.2'
   s.pod_target_xcconfig = {
     'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO'
   }

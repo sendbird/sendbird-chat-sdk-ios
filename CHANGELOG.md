@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.39.1 (Apr 17, 2026)
+
+### New Interfaces
+- Made `aiAgentChannelFilter` and `deskChannelFilter` publicly accessible on `GroupChannelListQueryParams`, `GroupChannelListQuery`, and `GroupChannelChangeLogsParams` (#1722)
+
+### Bug Fixes
+- Fixed an issue where newly received messages could be missing from the local cache after a `MessageCollection` is disposed and re-initialized (#1723)
+
 ## 4.39.0 (Apr 09, 2026)
 
 ### Build Environment

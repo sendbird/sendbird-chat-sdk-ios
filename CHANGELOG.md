@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.39.2 (Apr 24, 2026)
+
+### Improvements
+- Guaranteed message resend ordering
+
 ## 4.39.1 (Apr 17, 2026)
 
 ### New Interfaces

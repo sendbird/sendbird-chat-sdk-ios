@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.39.3 (Apr 29, 2026)
+
+### Bug Fix
+- Fixed a cold-start changelog delivery bug where the memory cache retained stale `GroupChannel` data after DB upsert, causing `GroupChannelCollection` to surface outdated `lastMessage` values (#1732)
+
 ## 4.39.2 (Apr 24, 2026)
 
 ### Improvements

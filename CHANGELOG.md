@@ -1,5 +1,19 @@
 # Changelog
 
+## 4.39.4 (May 14, 2026)
+
+### Added
+- Chat logging is now routed through the shared `SendbirdLogger` and emitted in the unified Sendbird log format (#1727)
+- New `Log.info(...)` / `Log.warn(...)` / `Log.error(...)` helpers used throughout Chat internals (#1727)
+
+### Deprecated
+- `SendbirdChat.setLogLevel(_:)` and `InitParams.logLevel` — use `SendbirdLogger.setLevel(_:)` or `SendbirdLogger.setLevel(_:for: .chat)` instead. Existing call sites continue to work and are forwarded to a compatibility setter; legacy `LogLevel` maps 1:1 to `AuthLogLevel` (#1727)
+
+### Changed
+- `SendbirdChatMain.logLevel` is now a computed property backed by `SendbirdLogger.level(for: .chat)` — `SendbirdLogger` is the single source of truth for the effective Chat log level (#1727)
+- If the host app sets a `SendbirdLogger` level before `SendbirdChat.initialize(...)`, that level is no longer overwritten by the legacy `InitParams.logLevel` default (#1727)
+- Once `SendbirdLogger.setLevel(...)` has been called, `SendbirdChat.setLogLevel(_:)` and `InitParams.logLevel` are ignored (#1727)
+
 ## 4.39.3 (Apr 29, 2026)
 
 ### Bug Fix

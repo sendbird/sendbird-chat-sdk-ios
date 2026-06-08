@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.39.5 (Jun 08, 2026)
+
+### New Interfaces
+- Added `SendbirdChat.registerDevicePushTokenForMultiDevicePush(_:completionHandler:)` method that registers the device token with multi-device push enabled (equivalent to calling `registerDevicePushToken(_:unique:completionHandler:)` with `unique: false`)
+
 ## 4.39.4 (May 14, 2026)
 
 ### Added

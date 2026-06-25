@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.39.6 (Jun 25, 2026)
+
+### Bug Fixes
+- Fixed file upload to send the channel identifier as `channel_url` (#1761)
+
 ## 4.39.5 (Jun 08, 2026)
 
 ### New Interfaces

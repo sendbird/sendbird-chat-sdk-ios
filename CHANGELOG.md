@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.39.7 (Jul 02, 2026)
+
+### Bug Fixes
+- Fixed a frozen group channel momentarily reporting `isFrozen` as `false` through the `markAsRead` callback in `MessageCollection` (#1767)
+
 ## 4.39.6 (Jun 25, 2026)
 
 ### Bug Fixes

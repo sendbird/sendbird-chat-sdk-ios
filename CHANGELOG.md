@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.39.8 (Jul 20, 2026)
+
+### Bug Fixes
+- Updated `SendbirdAuth` to 1.1.4, fixing a duplicate connection that could remain after changing the host and improving stability during connection recovery.
+
 ## 4.39.7 (Jul 02, 2026)
 
 ### Bug Fixes

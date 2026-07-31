@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.39.9 (Jul 31, 2026)
+
+### Bug Fixes
+- Fixed a crash that could occur when a message collection received channel events concurrently or after it had been disposed.
+- Fixed a race condition in group channel caching that could occur during concurrent channel updates.
+- Improved thread safety when accessing cached messages in a message collection.
+- Fixed a crash caused by a request completing more than once and improved the stability of internal statistics flushing.
+
 ## 4.39.8 (Jul 20, 2026)
 
 ### Bug Fixes

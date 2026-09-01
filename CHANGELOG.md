@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.39.10 (Sep 01, 2026)
+
+### Bug Fixes
+- Fixed a hang that could briefly block the main thread while the SDK was initializing.
+- Improved the internal handling of the auto resend queue.
+- Updated `SendbirdAuth` to 1.2.0 for improved stability.
+
 ## 4.39.9 (Jul 31, 2026)
 
 ### Bug Fixes

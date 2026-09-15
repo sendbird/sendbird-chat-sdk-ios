@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.39.11 (Sep 15, 2026)
+
+### New Interfaces
+- Added `initialUserMessage` to `InitConversationParams`, which sets the given text as the user's first message when `GroupChannel.initConversation(params:)` creates a conversation (#1801)
+
 ## 4.39.10 (Sep 01, 2026)
 
 ### Bug Fixes

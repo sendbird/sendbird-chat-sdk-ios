@@ -94,6 +94,8 @@ You can use an Xcode native package manager **Swift Packages** for installation.
 
 ### CocoaPods
 
+> **Note**: On December 2, 2026, the public CocoaPods trunk will become read-only and will no longer accept new pod versions. We recommend migrating to Swift Package Manager for dependency management. To continue using CocoaPods, add the Sendbird spec source to the top of your `Podfile` as shown below.
+
 1. Open a terminal window, move to your project directory, and then create a **Podfile** by running the following command.
 
 ```bash
@@ -103,6 +105,9 @@ $ pod init
 2. A **Podfile** will be created in your project folder. Open the **Podfile** and modify the file like the following.
 
 ```bash
+source 'https://github.com/sendbird/sendbird-ios-distribution.git'
+source 'https://cdn.cocoapods.org/'
+
 # platform :ios, '13.0'
 
 target 'YOUR_PROJECT_NAME' do
@@ -110,7 +115,7 @@ target 'YOUR_PROJECT_NAME' do
    use_frameworks!
 
    # Pods for `YOUR_PROJECT_NAME`
-   pod SendbirdChatSDK
+   pod 'SendbirdChatSDK'
 end
 ```
 

@@ -1,3 +1,3 @@
 import SendbirdChatSDK
 
-public class SendbirdChatWrapper {}
+public enum SendbirdChatWrapper {}

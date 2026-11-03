@@ -1,5 +1,16 @@
 # Changelog
 
+## 4.39.12 (Nov 03, 2026)
+
+### New Interfaces
+- Added `CSATFollowUp`, which holds the answer to a single CSAT follow-up question
+- Added `followUp` to `CSATSubmitParams` to submit the answer to each CSAT follow-up question
+- Added `followUp` to `Conversation`, which returns the submitted CSAT follow-up answers
+
+### Bug Fixes
+- Fixed a crash that could occur when a channel was updated while its fields were being read
+- Fixed the duplicate `SendbirdChatWrapper` class warning shown when the app links other Sendbird SDKs
+
 ## 4.39.11 (Sep 15, 2026)
 
 ### New Interfaces

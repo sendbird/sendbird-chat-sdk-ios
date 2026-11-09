@@ -1,5 +1,22 @@
 # Changelog
 
+## 4.39.13 (Nov 09, 2026)
+
+### Bug Fixes
+- Fixed crashes and inconsistent data when channel events, such as mute, reaction, poll, or metadata updates, overlapped with saving the channel to the local cache
+- Fixed an issue where values bound to the local cache database could be read from released memory
+- Fixed an issue where a deleted channel metadata key could reappear in the cache when its create and delete events arrived close together
+- Fixed an issue where a message collection could wait forever for its initial load when message sync was stopped
+- Fixed a repeated completion call when a batched message sync request failed
+- Fixed data races when logging out or connecting as another user
+- Fixed a crash that could occur when debug logs converted a channel or a pending or failed message list to a string while another thread was updating it
+- Fixed crashes caused by out of range numeric values, such as a negative error code, an invalid typing indicator timeout, duplicated reaction user IDs, or unread counts that did not fit the target integer type
+
+### Improvements
+- Changed the `description` of `GroupChannel`, `OpenChannel`, and `FeedChannel` to leave out values that other threads can change, such as metadata values and the details of the last message and the latest pinned message
+- Stopped the WebSocket receive log and the push notification log from printing the session key and the device push token
+- Updated `SendbirdAuth` to 1.2.1 for improved stability
+
 ## 4.39.12 (Nov 03, 2026)
 
 ### New Interfaces

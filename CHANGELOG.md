@@ -1,5 +1,20 @@
 # Changelog
 
+## 4.39.14 (Nov 13, 2026)
+
+### Bug Fixes
+- Fixed an issue where a message sent while disconnected could stay pending after reconnecting, because the network monitor still reported the device as offline while the connection was already open
+- Fixed an issue where pending auto-resend messages whose resend period had expired kept showing as sending after the app relaunched, including when auto resend was turned off
+- Fixed an issue where calling `initialize` again with a different app ID while local cache setup was still in progress could clear or misconfigure the local cache of the new instance
+- Fixed an issue where a channel metadata key that was deleted and then created again did not appear in the local cache
+- Fixed a crash, and a left channel reappearing in the list, when the current user left or was banned from a channel while a group channel collection was loading the next page
+- Fixed data races when `startCollection` was called again on the same message collection, and stopped a disposed message collection from applying the result of an initialization that was still in progress
+- Fixed a deadlock that could occur when user information was saved to the local cache while messages were being written to it
+
+### Improvements
+- Reduced memory use when reading large files from the file cache
+- Updated `SendbirdAuth` to 1.2.2 for improved stability
+
 ## 4.39.13 (Nov 09, 2026)
 
 ### Bug Fixes

@@ -10,6 +10,7 @@
 
 1.  [Introduction](#introduction)
 1.  [Requirements](#requirements)
+1.  [Build with Claude Code or Codex](#build-with-claude-code-or-codex)
 1.  [Getting started](#getting-started)
 1.  [Sending your first message](#sending-your-first-message)
 1.  [Hiring](#we-are-hiring)
@@ -45,6 +46,37 @@ The minimum requirements for Chat SDK for iOS are:
 - `Swift 5.10 or later` or `Objective-C`
 
 > **Note**: Sendbird server supports Transport Layer Security (TLS) from version 1.0 up to 1.3. For example, in the server regions where TLS 1.3 isn’t available, lower versions, sequentially from 1.2 to 1.0, will be supported for secure data transmission.
+
+<br />
+
+## Build with Claude Code or Codex
+
+Two Sendbird plugins for Claude Code and Codex help you add this SDK to your iOS app:
+
+- The [Sendbird Client Plugin](https://tools.docs.sendbird.com/plugins/client) writes setup and feature code from verified Sendbird documentation and the Sendbird SDK you have installed.
+- The [Sendbird CLI plugin](https://tools.docs.sendbird.com/plugins/cli) signs you in to Sendbird and manages your apps, users, and channels with the Sendbird CLI. The client plugin can take the App ID from the app you choose there.
+
+In Claude Code:
+
+```bash
+claude plugin marketplace add sendbird/sendbird-plugins
+claude plugin install sendbird-client@sendbird
+claude plugin install sendbird-cli@sendbird
+```
+
+Start a new session, run `/sendbird-cli:sendbird-setup` to sign in and choose your app, and then run `/sendbird-client:setup --product chat` in your project.
+
+In Codex:
+
+```bash
+codex plugin marketplace add sendbird/sendbird-plugins
+codex plugin add sendbird-client@sendbird
+codex plugin add sendbird-cli@sendbird
+```
+
+Then call `$sendbird-cli:sendbird-setup` and `$sendbird-client:setup`.
+
+The client plugin runs local shell scripts as hooks. Review [What runs on your machine](https://github.com/sendbird/sendbird-client-plugin#what-runs-on-your-machine) before installing.
 
 <br />
 

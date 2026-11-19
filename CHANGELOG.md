@@ -1,5 +1,47 @@
 # Changelog
 
+## 4.39.15 (Nov 19, 2026)
+
+### Bug Fixes
+- Fixed crashes caused by duplicated keys or longer lists, such as a message meta array key added twice to the message params, a pinned channel URL listed twice, the same channel URL appearing twice in one page of synced channels, or a `latestUploadableFileInfos` longer than the files of a `MultipleFilesMessage`
+- Fixed a crash that could occur when an app kept `User` or `Member` objects in a `Set` or as dictionary keys while the SDK updated their nickname or profile. The `hash` of `User` is now computed from `userId` only
+- Fixed a crash that could occur when a push token was registered before connecting, because the completion handler was called twice. The completion handler is now called only once, with `.pending`, and the SDK registers the token after login without calling it again
+- Fixed an issue where calling `SendbirdChat.initialize` with different `InitParams`, such as another Application ID, left the previous instance's WebSocket open and never completed its connection in progress. The previous instance is now logged out first: its connection is closed, a connection in progress completes with `connectionCanceled`, and the local cache it opened is cleared. If its local cache setup is still running, `initialize` waits for it to finish
+- Fixed an issue where canceling a file message upload removed the other pending and failed messages of the same channel from the local cache
+- Fixed an issue where a canceled file message stayed in `MessageCollection.pendingMessages`
+- Fixed a possible crash when a pending file message cell is redrawn at the moment its upload finishes. The `FileMessageCreateParams` passed to `sendFileMessage` is no longer changed after the upload
+- Fixed an issue where changing a params object right after sending or updating a message, creating or updating a scheduled message, or creating or updating a poll, could change the request that was already queued or crash the app while the request was being encoded
+- Fixed an issue where creating or updating a scheduled file message with file data cleared the file data in the params object passed by the app
+- Fixed an issue where auto-resend could send the same message twice when the connection was restored while a resent message was waiting for its result
+- Fixed an issue where auto-resend could resend the same message endlessly when the resend finished without a message
+- Fixed an issue where pending and failed multiple files messages could hold another file's data when two files had the same name, or no file data when file names were not set
+- Fixed an issue where a failed file upload could finish its queued work before the queue started it
+- Fixed an issue where syncing poll changelogs could block the main thread and repeat requests endlessly
+- Fixed an issue where `ConversationListQuery` could keep loading pages when the server returned a token it had already used
+- Fixed an issue where the previous user's channel sync could continue after logout or a user switch and skip the new user's sync
+- Fixed a crash that could occur when connecting as a different user while local cache setup from initialization was still running
+- Fixed an issue where calling `connectIfNeeded` or authenticate twice before SDK initialization finished never called the first completion handler
+- Fixed rare crashes when list queries, group channel collections or SDK re-initialization overlapped with responses on other threads
+- Fixed an issue where a push token registration, push token list or unregister response that arrived after logout or a reconnect left stale push token data in the local cache, causing the next push token registration to be skipped
+- Fixed an issue where a `connect()` call still waiting to start was not answered, or opened a connection, after the user logged out. It now fails once with `connectionCanceled`
+- Fixed an issue where `connect()` never called its completion handler when the WebSocket URL could not be parsed. It now fails with an error
+- Fixed an issue where requests waiting in the queue when the user logged out never received a response. They now fail with `connectionCanceled`
+- Fixed an issue where cleanup from a previous logout could close the connection of the next login
+- Fixed a possible crash when the SDK was initialized again while commands were being dispatched
+- Fixed an issue where retrying after a server BUSY response reconnected immediately and without limit, or logged the user out. Retries now use the reconnection backoff and retry limit
+- Fixed an issue where all requests could stop responding when a session refresh never finished, such as when a session token arrived after the refresh timeout
+- Fixed concurrency issues in session refresh and connection handling
+- Fixed an issue where a file upload succeeded on the server but was reported as failed when the server response arrived in multiple parts
+- Fixed an issue where a request that had already failed with a timeout could still be sent, so retrying it sent the same message twice
+- Fixed a crash that could occur when sending several file messages in a row to the same channel and one of the uploads failed
+- Fixed an issue where file messages in a channel could stop being sent
+
+### Improvements
+- Changed the `hash` of `BaseMessage` to match `isEqual(_:)`, so two objects of the same message have the same hash value and can be used safely in a `Set` or as dictionary keys
+- Changed `isEqual(_:)` of `BaseMessage` to no longer treat two different messages as equal only because both have no `requestId` or both have a `messageId` of 0, such as two admin messages or two pending messages created in the same millisecond. A scheduled message is still matched by its `scheduledMessageId`, so it stays equal to itself after an update
+- Reduced memory use when sending a large file, which could cause the app to be terminated for using too much memory
+- Updated `SendbirdAuth` to 1.2.3
+
 ## 4.39.14 (Nov 13, 2026)
 
 ### Bug Fixes
